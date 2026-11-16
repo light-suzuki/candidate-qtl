@@ -1,0 +1,2 @@
+gene_id	evidence_code	direction	confidence	value	source_type	source_id	description
+GENE_CAUSAL	known_qtg	support	high	TO:0000208	manual_curation	doi:10.0/tutorial#qtg1	Ortholog is a published QTG for the trait in a related species.

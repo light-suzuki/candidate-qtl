@@ -1,0 +1,13 @@
+causal_layer	pathway_or_process	gene_family	mechanism_statement	source_ids	counter_hypothesis	discriminating_observation	model_species_evidence	model_species_mutant_phenotype	proposed_stable_id	reference_species	reference_gene_name	selection_rationale
+signaling	meristem maintenance	CLV	loss of CLV signalling enlarges the stem cell pool	PMID:8402901	a WOX lesion could do the same	count meristem cell layers	Arabidopsis clv1 mutant	fasciated stem	P30924	Arabidopsis thaliana	CLV1	reviewed receptor kinase with a fasciation phenotype
+execution	hormone transport	PIN	auxin redistribution changes stem geometry	PMID:1978859	meristem lesions give the same shape	assay auxin flux	Arabidopsis pin mutant	fused organs	Q9SXK1	Arabidopsis thaliana	PIN1	canonical auxin efflux carrier
+execution	cell wall biosynthesis	CESA	weakened wall changes stem shape	PMID:12172025	wall phenotypes rarely fasciate	section the stem	Arabidopsis irx mutant	collapsed xylem	Q9SWW6	Arabidopsis thaliana	CESA9	secondary wall cellulose synthase
+regulation	meristem transcription	WOX	WOX regulation changes stem-cell maintenance		CLV signaling may be primary	assay WOX expression				Arabidopsis thaliana	WOX1	independent regulatory layer
+perception	peptide perception	CLE receptor	peptide perception changes meristem size		transport may explain geometry	measure peptide response				Arabidopsis thaliana	CLV2	upstream perception layer
+signaling	MAP kinase signaling	MAPK	MAPK signaling changes division dynamics		wall weakness may be primary	measure phosphoproteins				Arabidopsis thaliana	MPK6	signaling complement
+regulation	organ polarity	HD-ZIP	polarity regulation changes stem organization		hormone flux may be primary	map polarity markers				Arabidopsis thaliana	REV	regulatory complement
+alternative	lateral identity	KANADI	lateral identity defects alter stem geometry		meristem size may be normal	section organ boundaries				Arabidopsis thaliana	KAN1	regulatory alternative
+execution	cell expansion	EXPANSIN	cell expansion defects alter stem width		division defects may be primary	measure cell dimensions				Arabidopsis thaliana	EXPA1	downstream execution
+signaling	redox signaling	RBOH	redox signaling changes meristem division		peptide perception may be primary	measure ROS dynamics				Arabidopsis thaliana	RBOHD	independent signal
+perception	receptor signaling	LRR-RLK	receptor input changes stem-cell balance		downstream execution may dominate	measure ligand response				Arabidopsis thaliana	ERECTA	second perception family
+alternative	mechanical feedback	MECHANOCHANNEL	mechanical feedback could mimic fasciation		genetic meristem signaling may be primary	apply mechanical perturbation				Arabidopsis thaliana	MSL10	noncanonical alternative

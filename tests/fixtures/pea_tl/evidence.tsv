@@ -1,0 +1,6 @@
+gene_id	evidence_code	direction	confidence	value	source_type	source_id	description
+Psat_TlB	curated_homolog_match	support	high	1	homology	UniProt:Q9LZS3	Wrong paralog: strong BLAST hit to the cross-species bait homolog
+Psat_TlB	curated_homolog_match	support	high	1	homology	UniProt:P93003	Second hit from the same comparative-annotation chain (collapses to one independent source)
+Psat_TlA	peak_proximal	support	medium	400	qtl_position	PMID:1	True gene: closest to the QTL peak but weaker homology to the chosen bait
+Psat_TlA	expression_detected	support	medium	3	expression	PMID:1	True gene: expressed in the target tissue (same study as the peak, so one source)
+Psat_Other	expression_detected	support	low	1	expression	matrix_note	Background expression only

@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "candidate-qtl"
+dynamic = ["version"]
+description = "Evidence-preserving plant QTL candidate triage and experiment decision-support workflow"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "LightSuzuki" }]
+requires-python = ">=3.12"
+dependencies = [
+  "biopython>=1.83",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6", "coverage[toml]>=7.0", "build>=1.0", "pytest>=8.0"]
+# Optional pandera backend for candidate_qtl.schemas. The built-in validators
+# are dependency-free; installing this extra enables schemas.pandera_schema().
+schema = ["pandera>=0.20"]
+# Sequence/indexed-FASTA commands request this explicitly.  Table-only core
+# commands and the default clean wheel remain usable without pysam (#192/#660).
+alignment = ["pysam>=0.22"]
+
+[project.scripts]
+# `run`, not `main`: `main` re-raises so the library/tests see the real
+# exception, while `run` maps it to the documented exit codes and keeps
+# tracebacks off expected input errors.
+candidate-qtl = "candidate_qtl.cli:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+# Single source of truth for the version: src/candidate_qtl/__init__.py.
+# A build reads the literal `__version__` assignment via AST (no import, no
+# runtime dependency), so `pyproject.toml` can never drift from what a wheel
+# built from this tree actually stamps into manifests (#266).
+version = { attr = "candidate_qtl.__version__" }
+
+[tool.setuptools.package-data]
+# Vendored runtime data (the default weight registry) so a clean wheel install
+# can rank without the source tree. Kept byte-identical to templates/ by a test.
+# refcorpus presets (refcorpus_presets.json) ride along so `--preset` works
+# from a clean wheel install too (issue #299).
+candidate_qtl = ["resources/*.tsv", "resources/*.json"]
+
+[tool.ruff]
+line-length = 200
+extend-exclude = ["docs/tutorial"]
+
+[tool.ruff.lint]
+# Catch real defects (pyflakes + syntax) without imposing broad style churn on
+# the existing dense one-line style. Broaden deliberately over time.
+select = ["F", "E9"]
+
+[tool.coverage.run]
+branch = true
+source = ["candidate_qtl"]
+
+[tool.coverage.report]
+# Ratchet, not a target: measured branch coverage is 84% at the time this gate
+# was added, so 80 leaves room for ordinary churn while making a real drop fail.
+# Configured here (not as a CI flag) so `coverage report` gates identically in
+# CI and locally. Raise it deliberately; never lower it to make a PR pass.
+fail_under = 80

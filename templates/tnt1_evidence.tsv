@@ -1,0 +1,2 @@
+reported_gene_id	genetic_background	mutant_line	fst_id	insertion_site	insertion_observed	published_mutant_phenotype	segregation_supported	independent_alleles_supported	complementation_or_rescue_supported	phenotype_or_function	gene_symbol	ontology_ids	source_ids	source_url	notes
+medtr.R108.gnmHiC_1.ann1.EXAMPLE	R108	NF_EXAMPLE	FST_EXAMPLE	chr1:1	supported	not_evaluated	not_evaluated	not_evaluated	not_evaluated					https://medicago-mutant.okstate.edu/	replace this example row with source-backed curated evidence

@@ -1,0 +1,3 @@
+case_id	trait	interval	causal_gene	causal_variant_class	answer_source_id	expected_recovery
+tut_coding	starch_trait	chr1:1-900	GENE_CAUSAL	coding	doi:10.0/tutorial#qtg1	recovered_top1
+tut_regulatory	starch_trait	chr1:1-900	DECOY2	regulatory	doi:10.0/tutorial#reg	miss_expected_no_coding_evidence

@@ -1,0 +1,2 @@
+candidate_gene_id	reference_gene_id	relationship	orthogroup	source_id
+QTL_GENE_001	AT1G00000	one_to_one	OG0000001	orthofinder_run_or_ensembl_compara_accession

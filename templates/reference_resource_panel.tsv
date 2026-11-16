@@ -1,0 +1,6 @@
+resource_id	role	resource_type	taxon	assembly_id	annotation_version	proteome_version	db_version	source	uri_or_path	external_api	review_status	notes
+native_genome	native	genome_fasta	NCBI:txid_native	ASM_native_v2	annotation_v2	proteome_v2		https://example.org/native/assembly	genome/native.fa	false	reviewed	QTL coordinate and candidate extraction base
+native_annotation	native	annotation_gff3	NCBI:txid_native	ASM_native_v2	annotation_v2			https://example.org/native/annotation	genome/native.gff3	false	reviewed	must accompany the native genome
+close_anchor_genome	close_anchor	genome_fasta	NCBI:txid_anchor	ASM_anchor_v1	annotation_v1			https://example.org/anchor	genome/anchor.fa	false	pending_review	high-quality synteny anchor; optional
+functional_reference_api	functional_reference	rest_api	NCBI:txid_reference			proteome_ref_v1	uniprot_2026_01	https://rest.uniprot.org/uniprotkb	https://rest.uniprot.org/uniprotkb	true	pending_review	external functional/pathway reference; declared, not fetched here
+outgroup_proteome	outgroup	proteome_fasta	NCBI:txid_outgroup		annotation_v1	proteome_out_v1		https://example.org/outgroup	proteome/outgroup.faa	false	pending_review	gene-family duplication/conservation check; optional

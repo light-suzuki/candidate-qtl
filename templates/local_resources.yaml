@@ -1,0 +1,9 @@
+resources:
+  example_fasta:
+    type: fasta
+    assembly: example_v1
+    path: /path/to/genome.fa
+  example_gff3:
+    type: gff3
+    assembly: example_v1
+    path: /path/to/genes.gff3

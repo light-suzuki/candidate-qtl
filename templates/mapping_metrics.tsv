@@ -1,0 +1,9 @@
+metric	value	source
+interval_size_bp		required: mapping support interval
+interval_size_cm		optional: genetic map
+marker_count		required: marker table
+informative_recombinant_count		required: recombinant table
+lod_peak_count		required: QTL scan
+peak_stability		required: true or false from resampling/environment review
+phenotype_direction_consistent		required: true or false from phenotype/QTL effect review
+candidate_gene_count		optional: reference extraction

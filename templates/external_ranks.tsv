@@ -1,0 +1,8 @@
+ranker_id	ranker_family	gene_id	rank	raw_score	percentile	coverage	mapping_confidence	reference_species	source	version	dependency_group
+comparative_ortholog_v1	comparative_genomics	GENE_A	1	0.91	0.99	covered	high	close_anchor_sp	orthofinder_local	2.5.5	orthology_2026a
+comparative_ortholog_v1	comparative_genomics	GENE_B	2	0.80	0.95	covered	medium	close_anchor_sp	orthofinder_local	2.5.5	orthology_2026a
+comparative_ortholog_v1	comparative_genomics	GENE_C		0	0	uncovered	low	close_anchor_sp	orthofinder_local	2.5.5	orthology_2026a
+pathway_knowledge_v1	knowledge_pathway	GENE_A	3	12.4		covered	medium	functional_reference_sp	local_pathway_db	2026.01	pathway_2026a
+pathway_knowledge_v1	knowledge_pathway	GENE_C	1	20.1		covered	medium	functional_reference_sp	local_pathway_db	2026.01	pathway_2026a
+external_ml_v1	external_ml	GENE_B	1	0.77	0.98	covered	high	broad_model	external_service	1.0	ml_service_2026a
+external_ml_v1	external_ml	GENE_C	2	0.60	0.90	covered	medium	broad_model	external_service	1.0	ml_service_2026a

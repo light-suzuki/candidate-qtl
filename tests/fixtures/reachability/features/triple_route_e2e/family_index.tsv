@@ -1,0 +1,3 @@
+gene_id	protein_id	chrom	start	end	best_subject	best_subject_symbol	best_subject_stem	best_identity	best_query_coverage	best_evalue	best_bitscore	second_bitscore	top2_bitscore_ratio	symbol_source_rank	symbol_source_bitscore_ratio	family_subjects	family_symbols	family_stems	assignment_status	discovery_bucket_id	discovery_bucket_method	evolutionary_family_id	evolutionary_family_source	evolutionary_family_status	index_scope
+Psat_CLV1	Psat_CLV1	chr5	1000	3000	sp|P0CLV1|CLV1_ARATH	CLV1	CLV	62.0	1.0	1e-60	500.0	0.0	0.0	1	1.0	sp|P0CLV1|CLV1_ARATH	CLV1	CLV	assigned	CLV	symbol_stem			unresolved	reference_genome
+Psat_UNK	Psat_UNK	chr5	9000	11000															unassigned					unresolved	reference_genome

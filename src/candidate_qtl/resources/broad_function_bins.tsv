@@ -1,0 +1,83 @@
+bin_id	bin_label	match_type	pattern	source	notes
+meristem_development	meristem / development	go	GO:0010073	GO	meristem maintenance
+meristem_development	meristem / development	go	GO:0048507	GO	meristem development
+meristem_development	meristem / development	go	GO:0009944	GO	polarity specification
+meristem_development	meristem / development	keyword	meristem	curated
+meristem_development	meristem / development	keyword	stem cell	curated
+meristem_development	meristem / development	keyword	organ boundary	curated
+meristem_development	meristem / development	keyword	shoot apical	curated
+flowering_reproductive	flowering / reproductive development	go	GO:0009908	GO	flower development
+flowering_reproductive	flowering / reproductive development	go	GO:0048638	GO	regulation of developmental growth
+flowering_reproductive	flowering / reproductive development	keyword	flowering	curated
+flowering_reproductive	flowering / reproductive development	keyword	inflorescence	curated
+flowering_reproductive	flowering / reproductive development	keyword	floral	curated
+flowering_reproductive	flowering / reproductive development	keyword	ovule	curated
+flowering_reproductive	flowering / reproductive development	keyword	pollen	curated
+vascular_cell_wall	vascular / cell wall	go	GO:0010087	GO	phloem or xylem histogenesis
+vascular_cell_wall	vascular / cell wall	go	GO:0071554	GO	cell wall organization or biogenesis
+vascular_cell_wall	vascular / cell wall	keyword	vascular	curated
+vascular_cell_wall	vascular / cell wall	keyword	xylem	curated
+vascular_cell_wall	vascular / cell wall	keyword	cellulose	curated
+vascular_cell_wall	vascular / cell wall	keyword	pectin	curated
+vascular_cell_wall	vascular / cell wall	keyword	cell wall	curated
+hormone_signaling	hormone signaling	go	GO:0009725	GO	response to hormone
+hormone_signaling	hormone signaling	go	GO:0009734	GO	auxin-activated signaling pathway
+hormone_signaling	hormone signaling	keyword	auxin	curated
+hormone_signaling	hormone signaling	keyword	cytokinin	curated
+hormone_signaling	hormone signaling	keyword	gibberellin	curated
+hormone_signaling	hormone signaling	keyword	brassinosteroid	curated
+hormone_signaling	hormone signaling	keyword	abscisic acid	curated
+hormone_signaling	hormone signaling	keyword	ethylene	curated
+hormone_signaling	hormone signaling	keyword	jasmon	curated
+stress_immunity	stress / immunity	go	GO:0006952	GO	defense response
+stress_immunity	stress / immunity	go	GO:0006950	GO	response to stress
+stress_immunity	stress / immunity	keyword	disease resistance	curated
+stress_immunity	stress / immunity	keyword	pathogen	curated
+stress_immunity	stress / immunity	keyword	immunity	curated
+stress_immunity	stress / immunity	keyword	nucleotide-binding site	curated	NBS-LRR
+primary_metabolism	primary metabolism	go	GO:0005975	GO	carbohydrate metabolic process
+primary_metabolism	primary metabolism	go	GO:0006096	GO	glycolytic process
+primary_metabolism	primary metabolism	keyword	starch	curated
+primary_metabolism	primary metabolism	keyword	sucrose	curated
+primary_metabolism	primary metabolism	keyword	amino acid biosynthe	curated
+primary_metabolism	primary metabolism	keyword	photosynth	curated
+secondary_metabolism	secondary metabolism	go	GO:0019748	GO	secondary metabolic process
+secondary_metabolism	secondary metabolism	keyword	flavonoid	curated
+secondary_metabolism	secondary metabolism	keyword	anthocyanin	curated
+secondary_metabolism	secondary metabolism	keyword	terpene	curated
+secondary_metabolism	secondary metabolism	keyword	alkaloid	curated
+secondary_metabolism	secondary metabolism	keyword	cytochrome p450	curated
+transport	transport	go	GO:0055085	GO	transmembrane transport
+transport	transport	go	GO:0006810	GO	transport
+transport	transport	keyword	transporter	curated
+transport	transport	keyword	channel	curated
+transport	transport	keyword	efflux carrier	curated
+transport	transport	keyword	aquaporin	curated
+transcription_chromatin	transcription / chromatin	go	GO:0006355	GO	regulation of transcription, DNA-templated
+transcription_chromatin	transcription / chromatin	go	GO:0006338	GO	chromatin remodeling
+transcription_chromatin	transcription / chromatin	keyword	transcription factor	curated
+transcription_chromatin	transcription / chromatin	keyword	homeobox	curated
+transcription_chromatin	transcription / chromatin	keyword	zinc finger	curated
+transcription_chromatin	transcription / chromatin	keyword	chromatin	curated
+transcription_chromatin	transcription / chromatin	keyword	histone	curated
+protein_turnover	protein turnover	go	GO:0016567	GO	protein ubiquitination
+protein_turnover	protein turnover	go	GO:0006508	GO	proteolysis
+protein_turnover	protein turnover	keyword	ubiquitin	curated
+protein_turnover	protein turnover	keyword	f-box	curated
+protein_turnover	protein turnover	keyword	protease	curated
+protein_turnover	protein turnover	keyword	proteasome	curated
+signaling_receptor	receptor / signal transduction	go	GO:0007165	GO	signal transduction
+signaling_receptor	receptor / signal transduction	go	GO:0004672	GO	protein kinase activity
+signaling_receptor	receptor / signal transduction	keyword	receptor-like kinase	curated
+signaling_receptor	receptor / signal transduction	keyword	leucine-rich repeat	curated
+signaling_receptor	receptor / signal transduction	keyword	receptor kinase	curated
+signaling_receptor	receptor / signal transduction	keyword	peptide ligand	curated
+rna_processing	RNA processing	go	GO:0006396	GO	RNA processing
+rna_processing	RNA processing	keyword	rna-binding	curated
+rna_processing	RNA processing	keyword	splicing	curated
+rna_processing	RNA processing	keyword	pentatricopeptide	curated
+cell_division_cytoskeleton	cell division / cytoskeleton	go	GO:0051301	GO	cell division
+cell_division_cytoskeleton	cell division / cytoskeleton	go	GO:0007010	GO	cytoskeleton organization
+cell_division_cytoskeleton	cell division / cytoskeleton	keyword	cyclin	curated
+cell_division_cytoskeleton	cell division / cytoskeleton	keyword	tubulin	curated
+cell_division_cytoskeleton	cell division / cytoskeleton	keyword	kinesin	curated

@@ -1,0 +1,4 @@
+reference_gene_id	reference_species	family_id	orthogroup_id	description	function_description	mutant_phenotype	pathway	go_terms	source_id	source_url
+AT1G62800	Arabidopsis thaliana	ASP	OG0000123	aspartate aminotransferase	amino acid metabolism	pale green seedlings	amino_acid_metabolism	GO:0004069	UniProt:P46643	https://rest.uniprot.org/uniprotkb/P46643.json
+AT2G21770	Arabidopsis thaliana	CESA	OG0000045	cellulose synthase A9	cellulose biosynthesis in the secondary cell wall	collapsed xylem and reduced wall thickness	cell_wall_biosynthesis	GO:0016760	PMID:12172025	https://europepmc.org/article/MED/12172025
+MTR_4G094930	Medicago truncatula	SBE	OG0000311	starch branching enzyme I	transfers alpha-1,4 glucan chains to form alpha-1,6 branch points	wrinkled seeds with reduced starch and raised sucrose	starch_biosynthesis	GO:0003844	PMID:1978859	https://europepmc.org/article/MED/1978859

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "feature_id": "synthetic-orphan-feature",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "synthetic-orphan-cmd",
+        "argv": []
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/family_index/blast_hits.tsv"
+      ],
+      "expected_artifacts": [
+        "orphan_output.tsv"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "orphan_manifest.json",
+          "keys": ["status"]
+        }
+      ],
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "synthetic orphan"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#373",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#synthetic-orphan"
+    }
+  ]
+}

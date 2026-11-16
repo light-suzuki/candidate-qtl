@@ -1,0 +1,2 @@
+case_id	focal_species	phenotype	direction	inheritance	affected_tissue	developmental_stage	onset	penetrance	synonyms	ontology_terms	known_exclusions	researcher_constraints	uncertainty
+opaque_reachability	Test plant	short roots with delayed gravitropic bending	reduced	recessive	root	seedling	early	complete					assay timing varies

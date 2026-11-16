@@ -1,0 +1,4 @@
+marker_id	chrom	pos_bp	pos_cm
+marker_1	Chr1	1000000	0
+marker_2	Chr1	5000000	5
+marker_3	Chr1	10000000	12

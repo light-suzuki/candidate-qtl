@@ -1,0 +1,3 @@
+gene_id	chrom	start	end	annotation_quality	protein_length
+GeneStrong	chr1	100	300	complete_orf	66
+GeneDark	chr1	500	650	complete_orf	49

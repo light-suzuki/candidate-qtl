@@ -1,0 +1,3 @@
+variant_id	gene_id	chrom	pos	ref	alt	variant_type	validation_status	parent_a_allele	parent_b_allele	sanger_trace_or_vcf_source	notes
+example_snp_01	GeneA	Chr1	100000	A	G	SNP	confirmed	A	G	local/path/or/accession	Only confirmed parental differences should enter marker design
+example_indel_01	GeneB	Chr1	200000	AT	A	InDel	confirmed	AT	A	local/path/or/accession	Expected size difference should be checked against amplicon resolution

@@ -1,0 +1,4 @@
+reference_gene_id	term	ontology_id	ontology_name	source
+REFERENCE_GENE_ID	meristem maintenance	GO:0010073	meristem maintenance	TAIR
+REFERENCE_GENE_ID	CLAVATA-WUSCHEL signaling	GO:0009934	regulation of meristem structural organization	TAIR
+ANCHOR_GENE_ID	shoot system development	GO:0048367	shoot system development	MtGDB

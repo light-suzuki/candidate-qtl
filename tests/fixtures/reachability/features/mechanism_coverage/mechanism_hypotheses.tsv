@@ -1,0 +1,13 @@
+hypothesis_id	case_id	causal_layer	pathway_or_process	gene_family	mechanism_statement	expected_role	direction_consistency	model_species_evidence	model_species_mutant_phenotype	source_ids	proposed_stable_id	reference_species	reference_gene_name	selection_rationale	counter_hypothesis	discriminating_observation	confidence	uncertainty	payload_source	model	prompt_version	parser_version	retrieval_provenance	proposal_round	interval_informed	review_status	rank_contribution	notes
+reach_01	opaque_reachability	signaling	process_1	FAMILY_1	fixture mechanism 1														agent					1	False	pending_verification	none	
+reach_02	opaque_reachability	signaling	process_2	FAMILY_2	fixture mechanism 2														agent					1	False	pending_verification	none	
+reach_03	opaque_reachability	signaling	process_3	FAMILY_3	fixture mechanism 3														agent					1	False	pending_verification	none	
+reach_04	opaque_reachability	signaling	process_4	FAMILY_4	fixture mechanism 4														agent					1	False	pending_verification	none	
+reach_05	opaque_reachability	signaling	process_5	FAMILY_5	fixture mechanism 5														agent					1	False	pending_verification	none	
+reach_06	opaque_reachability	signaling	process_6	FAMILY_6	fixture mechanism 6														agent					1	False	pending_verification	none	
+reach_07	opaque_reachability	signaling	process_7	FAMILY_7	fixture mechanism 7														agent					1	False	pending_verification	none	
+reach_08	opaque_reachability	signaling	process_8	FAMILY_8	fixture mechanism 8														agent					1	False	pending_verification	none	
+reach_09	opaque_reachability	signaling	process_9	FAMILY_9	fixture mechanism 9														agent					1	False	pending_verification	none	
+reach_10	opaque_reachability	regulation	process_10	FAMILY_10	fixture mechanism 10														agent					1	False	pending_verification	none	
+reach_11	opaque_reachability	alternative	process_11	FAMILY_11	fixture mechanism 11														agent					1	False	pending_verification	none	
+reach_12	opaque_reachability	alternative	process_12	FAMILY_12	fixture mechanism 12														agent					1	False	pending_verification	none	

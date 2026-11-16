@@ -1,0 +1,3 @@
+gene_id	evidence_code	direction	confidence	value	source_type	source_id	description	phenotype_direction
+GeneStrong	known_qtg	support	high	validated model phenotype	literature	PMID:12345	Source-backed genetic model evidence	increase
+GeneDark	annotation_incomplete	rescue	medium	no homology	annotation	fixture:gff3	Short complete ORF without homology	unknown

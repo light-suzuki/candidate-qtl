@@ -1,0 +1,69 @@
+resources:
+  - resource_id: lotusbase.Gifu_B-129.Gifu_v1_2.ann_v1_3
+    species: Lotus japonicus
+    accession_or_ecotype: Gifu B-129
+    assembly_id: Gifu_v1.2
+    annotation_id: Gifu_v1.3
+    native_gene_id_namespace: LotusBase:Gifu_v1.2
+    namespace_scheme: external
+    role: mutant_reference
+    required: false
+    assembly_filename: Lotusjaponicus_Gifu_v1.2_genome.fa.gz
+    assembly_path: Lotusjaponicus_Gifu_v1.2_genome.fa.gz
+    assembly_md5: ec94ee57478d395b9dc37bbabaa96767
+    cds_filename: Lotusjaponicus_Gifu_v1.3_cds.fa.gz
+    cds_path: Lotusjaponicus_Gifu_v1.3_cds.fa.gz
+    cds_md5: 39fd2b5aa169e8eb18d55e4350fbc33c
+    protein_filename: Lotusjaponicus_Gifu_v1.3_proteins.fa.gz
+    protein_path: Lotusjaponicus_Gifu_v1.3_proteins.fa.gz
+    protein_md5: a297c83c5e213c1ca5a287316caccb36
+    gff3_filename: Lotusjaponicus_Gifu_v1.3_predictedProteins.gff3.gz
+    gff3_path: Lotusjaponicus_Gifu_v1.3_predictedProteins.gff3.gz
+    gff3_md5: 444d7a31a4d70b0136974a1fa3aa3204
+    go_filename: Lotusjaponicus_Gifu_v1.2_geneOntology.gaf.gz
+    go_path: Lotusjaponicus_Gifu_v1.2_geneOntology.gaf.gz
+    go_md5: 1f734344c29f6b568d704373f90d8c3d
+    transcript_mapping_filename: Lotusjaponicus_TranscriptMapping.csv.gz
+    transcript_mapping_path: Lotusjaponicus_TranscriptMapping.csv.gz
+    transcript_mapping_md5: 10ede41cb6356c5cbb6eed7b912d1c74
+    transcript_mapping_relation: bidirectional_blastn_candidate_correspondence
+    transcript_mapping_source_generation: MG20_v3.0
+    transcript_mapping_target_generation: Gifu_v1.2
+    transcript_mapping_identity_scope: candidate_only_not_verified
+    transcript_mapping_multiplicity_policy: preserve_one_to_one_one_to_many_many_to_many
+    lore1_experimental_background: Gifu
+    lore1_mg20_coordinate_mapping_role: coordinate_lookup_not_background_identity
+    native_id_case_policy: preserve_exact_upstream_case
+    cross_resource_identity_rule: explicit_mapping_required_no_symbol_join
+    source_snapshot_date: 2026-08-22
+    source_url_or_upstream_id: https://lotus.au.dk/data/download
+    license_or_redistribution_note: upstream Lotus Base citation/usage terms apply
+
+  - resource_id: lotja.MG20.gnm3.ann1.WF9B
+    species: Lotus japonicus
+    accession_or_ecotype: MG20
+    assembly_id: gnm3
+    annotation_id: ann1
+    dataset_key4: WF9B
+    native_gene_id_namespace: lotja.MG20.gnm3.ann1
+    namespace_scheme: lis_full_id
+    role: near_reference
+    required: false
+    manifest_path: MG20.gnm3.ann1.WF9B/MANIFEST.MG20.gnm3.ann1.WF9B.yml
+    checksum_path: MG20.gnm3.ann1.WF9B/CHECKSUM.MG20.gnm3.ann1.WF9B.md5
+    fam3_path: MG20.gnm3.ann1.WF9B/lotja.MG20.gnm3.ann1.WF9B.legume.fam3.VLMQ.gfa.tsv.gz
+    protein_path: MG20.gnm3.ann1.WF9B/lotja.MG20.gnm3.ann1.WF9B.protein.faa.gz
+    gff3_path: MG20.gnm3.ann1.WF9B/lotja.MG20.gnm3.ann1.WF9B.gene_models_main.gff3.gz
+    interpro_path: MG20.gnm3.ann1.WF9B/lotja.MG20.gnm3.ann1.WF9B.iprscan.gff3.gz
+    lis_genome_dataset: MG20.gnm3.QPGB
+    lis_genome_genbank_accession: GCA_000181115.2
+    lotusbase_comparative_generation: MG20_v3.0
+    lotusbase_genome_md5: 08bdeb9d026debc04c35672063fd6959
+    lotusbase_protein_md5: e501f31cf850d74cb8c51ba7f684f4bf
+    lotusbase_gff3_md5: baafdee6708503c328ad9e2382e88259
+    generation_compatibility_rule: explicit_metadata_or_mapping_required_not_numeric_name_inference
+    native_id_case_policy: preserve_exact_upstream_case
+    cross_resource_identity_rule: explicit_mapping_required_no_symbol_join
+    source_snapshot_date: 2026-08-22
+    source_url_or_upstream_id: https://data.legumeinfo.org/Lotus/japonicus/annotations/MG20.gnm3.ann1.WF9B/
+    license_or_redistribution_note: upstream LIS terms apply

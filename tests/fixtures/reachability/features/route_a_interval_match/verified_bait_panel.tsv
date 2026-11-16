@@ -1,0 +1,2 @@
+case_id	bait_id	hypothesis_id	pathway_or_process	gene_family	reference_gene_name	reference_species	expected_role	sequence_length	sequence_sha256	source_provider	source_url	retrieved_at	function_source_ids	rank_contribution	panel_status
+case_001	sp|P0CLV1|CLV1_ARATH	hyp_001		CLV	CLV1	Arabidopsis thaliana		96	sha256hyp_001	local_record_cache		2026-01-01T00:00:00Z	PMID:8402901	none	frozen

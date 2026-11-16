@@ -1,0 +1,9 @@
+{
+  "source_url": "https://zenodo.org/records/15889083/files/Araport11_GFF3_genes_transposons.20240331.gff.gz",
+  "source_gzip_sha256": "9a2fb412325c8df21b715c96896d59015d08de22547f04366684065508685144",
+  "raw_subset_sha256": "75ceba97e881c1cef3baa59e1cd09ee0a8de974d9416fb0ead9157b2eed2b881",
+  "selection": "standard GFF version header + four raw lines containing AT3G09285, as in #818; no field, order or coordinate edits",
+  "raw_feature_lines_sha256": "fea032db6cd18edbc1e168cedc6731dd3a076fcddf8c82a4fe5e03b36beb48b8",
+  "feature_count": 4,
+  "scope": "annotation identity regression; not a causal benchmark"
+}

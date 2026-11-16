@@ -1,0 +1,10 @@
+##gff-version 3
+chr1	tutorial	gene	101	160	.	+	.	ID=GENE_CAUSAL;Name=GENE_CAUSAL
+chr1	tutorial	mRNA	101	160	.	+	.	ID=GENE_CAUSAL.1;Parent=GENE_CAUSAL
+chr1	tutorial	CDS	101	160	.	+	0	Parent=GENE_CAUSAL.1
+chr1	tutorial	gene	301	360	.	+	.	ID=DECOY1;Name=DECOY1
+chr1	tutorial	mRNA	301	360	.	+	.	ID=DECOY1.1;Parent=DECOY1
+chr1	tutorial	CDS	301	360	.	+	0	Parent=DECOY1.1
+chr1	tutorial	gene	501	560	.	+	.	ID=DECOY2;Name=DECOY2
+chr1	tutorial	mRNA	501	560	.	+	.	ID=DECOY2.1;Parent=DECOY2
+chr1	tutorial	CDS	501	560	.	+	0	Parent=DECOY2.1

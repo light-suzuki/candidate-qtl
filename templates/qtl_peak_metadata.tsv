@@ -1,0 +1,2 @@
+chrom	peak_position	peak_method	support_interval_start	support_interval_end	support_interval_type	recombinant_core_start	recombinant_core_end	marker_density_near_peak	source_id
+chr1	3200000	interval_mapping	2900000	3600000	1.5_lod	3100000	3300000	4.5	doi:10.0000/example#qtl_fasciation_2024

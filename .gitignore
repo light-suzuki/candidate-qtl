@@ -1,0 +1,72 @@
+# Unpublished biological inputs and wet-lab outputs
+data/
+private_data/
+genomes/
+*.fa
+*.fasta
+*.fna
+*.gff
+*.gff3
+*.vcf
+*.vcf.gz
+*.bam
+*.cram
+*.ab1
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.nhr
+*.nin
+*.nsq
+*.ndb
+*.not
+*.ntf
+*.nto
+*.fai
+*.log
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+outputs/
+/bench/g5-type1-payloads/
+
+# Redistributable tutorial fixtures are intentionally tracked despite the
+# genomic-data ignores above; they contain only synthetic sequence.
+!docs/tutorial/
+!docs/tutorial/*.fa
+!docs/tutorial/*.gff3
+
+# Large benchmark executors live under CQTL_ASSET_ROOT and are pinned by a
+# small in-tree locator + SHA-256 manifest.  Never recommit regenerated copies.
+
+# Challenge benchmark mapping evidence (issue #366): small published query
+# sequences and the mapping command log are provenance-critical and tiny
+# (few KB); they are intentionally tracked like the tutorial fixtures.
+
+# Synthetic comparative-locus benchmark fixtures are redistributable; generated runs are not.
+
+# Coverage artifacts from local and CI test runs
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Stray discover/extract outputs if run from the repository root
+/01_extract/
+/02_candidate_flags.tsv
+/04_evidence.tsv
+/05_rank/
+/candidate_shortlist.tsv
+/discover_manifest.json
+/report.md
+/review_required.tsv
+
+# Local working files accidentally committed in #178 and untracked again; keep them out of git.
+/dist/
+/issues/
+/create_pea_benchmark.py
+/extract_known_genes.py
+/pea_benchmark_config.tsv
+/pea_homolog_queries.tsv

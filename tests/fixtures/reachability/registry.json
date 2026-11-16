@@ -1,0 +1,686 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "feature_id": "budget-run",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "budget-run",
+        "argv": [
+          "--extract-dir",
+          "{fixture:tests/fixtures/reachability/features/budget_run/extract}",
+          "--out-dir",
+          "{out}",
+          "--budget-profile",
+          "zero"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/budget_run/extract",
+        "tests/fixtures/reachability/features/budget_run/extract/candidates.tsv"
+      ],
+      "expected_artifacts": [
+        "tier0_inventory.tsv",
+        "tier1_clusters.tsv",
+        "tier2_plan.tsv",
+        "budget_handoff.tsv",
+        "budget_manifest.json",
+        "benchmark_resource_usage.json",
+        "deterministic_top20.tsv",
+        "llm_assisted_top20.tsv"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "budget_manifest.json",
+          "keys": [
+            "schema_version",
+            "case_id",
+            "status",
+            "budgets.sequence_query_limit.exhausted",
+            "unprocessed.unreviewed_candidate_count",
+            "outputs.benchmark_resource_usage_json"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "budget_manifest.json",
+        "values": {
+          "schema_version": "1.0",
+          "status": "completed"
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "budget-run writes inventory/cluster/plan/handoff/ledger only; never ranks or scores"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#373",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#budget-run"
+    },
+    {
+      "feature_id": "family-candidate-bridge",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "family-candidate-bridge",
+        "argv": [
+          "--route-b-atlas",
+          "{fixture:tests/fixtures/reachability/features/family_candidate_bridge/atlas.tsv}",
+          "--out-dir",
+          "{out}",
+          "--case-id",
+          "demo"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/family_candidate_bridge/atlas.tsv"
+      ],
+      "expected_artifacts": [
+        "family_candidate_bridge.tsv",
+        "family_candidate_bridge_manifest.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "family_candidate_bridge_manifest.json",
+          "keys": [
+            "schema_version",
+            "command",
+            "case_id",
+            "row_counts.total",
+            "row_counts.by_route.b",
+            "row_counts.by_mapping_tier.tier1_source_backed_unique",
+            "row_counts.by_mapping_tier.tier5_name_only",
+            "rank_contribution",
+            "outputs.family_candidate_bridge"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "family_candidate_bridge_manifest.json",
+        "values": {
+          "schema_version": "1.0",
+          "command": "family-candidate-bridge",
+          "case_id": "demo",
+          "row_counts.total": 2,
+          "row_counts.by_route.b": 2,
+          "row_counts.by_mapping_tier.tier1_source_backed_unique": 1,
+          "row_counts.by_mapping_tier.tier5_name_only": 1,
+          "rank_contribution": "none"
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "the bridge normalizes three routes' family evidence into one reporting table; every row carries rank_contribution=none and no score or rank artifact is written"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#374",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#family-candidate-bridge"
+    },
+    {
+      "feature_id": "family-index",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "family-index",
+        "argv": [
+          "--blast-hits",
+          "{fixture:tests/fixtures/reachability/features/family_index/blast_hits.tsv}",
+          "--genes",
+          "{fixture:tests/fixtures/reachability/features/family_index/genes.tsv}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/family_index/blast_hits.tsv",
+        "tests/fixtures/reachability/features/family_index/genes.tsv"
+      ],
+      "expected_artifacts": [
+        "family_index.tsv",
+        "family_index_manifest.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "family_index_manifest.json",
+          "keys": [
+            "schema_version",
+            "gene_count",
+            "assigned_count",
+            "reference_label"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "family_index_manifest.json",
+        "values": {
+          "schema_version": "1.4",
+          "gene_count": 6,
+          "assigned_count": 6,
+          "reference_label": ""
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "family-index builds a homology assignment table; it writes no score and no rank artifact"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#373",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#family-index"
+    },
+    {
+      "feature_id": "mechanism-import",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "mechanism-import",
+        "argv": [
+          "--payload",
+          "{fixture:tests/fixtures/reachability/features/mechanism_import/mechanism_payload.tsv}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/mechanism_import/mechanism_payload.tsv"
+      ],
+      "expected_artifacts": [
+        "mechanism_hypotheses.tsv",
+        "llm_pathway_hypotheses.tsv",
+        "review_required.tsv",
+        "mechanism_payload_adapter_map.tsv",
+        "raw_payload.tsv",
+        "mechanism_import_manifest.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "mechanism_import_manifest.json",
+          "keys": [
+            "schema_version",
+            "accepted_payload_schema",
+            "adapter_version",
+            "rows_read",
+            "rows_imported",
+            "raw_payload_sha256",
+            "hypothesis_count",
+            "freeze_verification"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "mechanism_import_manifest.json",
+        "values": {
+          "schema_version": "1.0",
+          "accepted_payload_schema": "legacy_v1_7col",
+          "adapter_version": "mechanism-payload-adapter-1.0.0",
+          "rows_read": 3,
+          "rows_imported": 3,
+          "hypothesis_count": 3
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "mechanism-import converts a payload into hypothesis rows; every row carries rank_contribution=none and no score or rank artifact is written"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#380",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#mechanism-import"
+    },
+    {
+      "feature_id": "mechanism-import-coverage",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "mechanism-coverage-audit",
+        "argv": [
+          "--mechanisms",
+          "{fixture:tests/fixtures/reachability/features/mechanism_coverage/mechanism_hypotheses.tsv}",
+          "--mechanism-import-manifest",
+          "{fixture:tests/fixtures/reachability/features/mechanism_coverage/mechanism_import_manifest.json}",
+          "--localization-freeze-manifest",
+          "{fixture:tests/fixtures/reachability/features/mechanism_coverage/phenotype_localization_freeze_manifest.json}",
+          "--investigation",
+          "{fixture:tests/fixtures/reachability/features/mechanism_coverage/phenotype_investigation.tsv}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/mechanism_coverage/mechanism_hypotheses.tsv",
+        "tests/fixtures/reachability/features/mechanism_coverage/mechanism_import_manifest.json",
+        "tests/fixtures/reachability/features/mechanism_coverage/phenotype_localization.frozen.json",
+        "tests/fixtures/reachability/features/mechanism_coverage/phenotype_localization_freeze_manifest.json",
+        "tests/fixtures/reachability/features/mechanism_coverage/phenotype_investigation.tsv"
+      ],
+      "expected_artifacts": [
+        "mechanism_hypotheses.tsv",
+        "llm_pathway_hypotheses.tsv",
+        "mechanism_coverage_audit.json",
+        "mechanism_coverage_manifest.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "mechanism_coverage_manifest.json",
+          "keys": [
+            "schema_version",
+            "contract_version",
+            "interval_blind",
+            "rank_contribution",
+            "status",
+            "freeze_ready",
+            "outputs.mechanisms_sha256",
+            "outputs.audit_sha256"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "mechanism_coverage_manifest.json",
+        "values": {
+          "schema_version": "1.0",
+          "contract_version": "route-a-causal-coverage-1.1.0",
+          "interval_blind": true,
+          "rank_contribution": "none",
+          "status": "pass",
+          "freeze_ready": true
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "causal-layer labels audit hypothesis coverage only; merged rows preserve rank_contribution=none and no score or rank artifact is written"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#658",
+      "doc_reference": "docs/ROUTE-A-HYPOTHESIS-COVERAGE.ja.md"
+    },
+    {
+      "feature_id": "route-a-interval-match",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "route-a-interval-match",
+        "argv": [
+          "--panel",
+          "{fixture:tests/fixtures/reachability/features/route_a_interval_match/verified_bait_panel.tsv}",
+          "--hypotheses",
+          "{fixture:tests/fixtures/reachability/features/route_a_interval_match/hypotheses.tsv}",
+          "--family-index",
+          "{fixture:tests/fixtures/reachability/features/route_a_interval_match/family_index.tsv}",
+          "--interval",
+          "chr1:1000-5000",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/route_a_interval_match/family_index.tsv",
+        "tests/fixtures/reachability/features/route_a_interval_match/hypotheses.tsv",
+        "tests/fixtures/reachability/features/route_a_interval_match/verified_bait_panel.tsv"
+      ],
+      "expected_artifacts": [
+        "route_a_interval_family_match.tsv",
+        "verified_target_hypotheses.tsv",
+        "hypothesis_interval_falsification.tsv",
+        "surviving_candidates.tsv",
+        "review_required.tsv",
+        "route_a_interval_family_match_manifest.json",
+        "pathway_interval_falsify_manifest.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "route_a_interval_family_match_manifest.json",
+          "keys": [
+            "schema_version",
+            "evaluated",
+            "family_status_counts",
+            "verified_bait_hypotheses"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "route_a_interval_family_match_manifest.json",
+        "values": {
+          "evaluated": true,
+          "family_status_counts.concrete_interval_gene_matched": 1,
+          "route": "a"
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "forward-matching verified baits to interval genes is a status read-out; the emitted TSV carries rank_contribution=none and no score column is written"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#373",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#route-a-interval-match"
+    },
+    {
+      "feature_id": "route-b-light-local-research",
+      "integration_status": "core_only_non_closing_slice",
+      "remaining_wiring": "Register repository Light science-v2/preflight/read/patch orchestration in the canonical source/installed reachability gate; fixed-response CLI/Wet replay is verified separately, not registry integration coverage. Issues #1013/#1014 remain open.",
+      "doc_reference": "docs/AGENTIC-QTL-CASE.ja.md"
+    },
+    {
+      "feature_id": "route-b-research-refreeze",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "route-b-semantic-bundle",
+        "argv": [
+          "--extend-bundle",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/parent.json}",
+          "--parent-bundle-sha256",
+          "5852b010532ad91f3ad20d74ebc6a92ed48685faf12b0d988a6817e2584e5f53",
+          "--research-discoveries",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/discoveries.json}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/tier_bibliography_budget/parent.json",
+        "tests/fixtures/reachability/features/tier_bibliography_budget/discoveries.json"
+      ],
+      "expected_artifacts": [
+        "route_b_semantic_bundle_manifest.json",
+        "route_b_semantic_bundle.json",
+        "route_b_semantic_prompts.jsonl",
+        "route_b_semantic_units.tsv",
+        "route_b_semantic_units_not_requested.tsv"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "route_b_semantic_bundle_manifest.json",
+          "keys": [
+            "interval_gene_count",
+            "semantic_unit_count",
+            "candidate_identity_preserved",
+            "research_source_lineage.parent_bundle_sha256",
+            "research_source_lineage.source_binding_verified"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "route_b_semantic_bundle_manifest.json",
+        "values": {
+          "interval_gene_count": 2,
+          "semantic_unit_count": 1,
+          "candidate_identity_preserved": true,
+          "research_source_lineage.parent_bundle_sha256": "5852b010532ad91f3ad20d74ebc6a92ed48685faf12b0d988a6817e2584e5f53",
+          "research_source_lineage.source_binding_verified": false
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "Metadata/source re-freeze only; original membership and separate support gates are unchanged."
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": true,
+      "owning_issue": "#909",
+      "doc_reference": "docs/AGENTIC-QTL-CASE.ja.md"
+    },
+    {
+      "feature_id": "tier-bibliography-budget-a",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "source-verify",
+        "argv": [
+          "--mechanisms",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/a.tsv}",
+          "--cache",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/cache.json}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/tier_bibliography_budget/a.tsv",
+        "tests/fixtures/reachability/features/tier_bibliography_budget/cache.json"
+      ],
+      "expected_artifacts": [
+        "source_verification_manifest.json",
+        "source_validation.tsv",
+        "mechanisms_with_verified_sources.tsv",
+        "bibliography_selection.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "source_verification_manifest.json",
+          "keys": [
+            "verification_policy",
+            "paper_selection.max_papers_per_reference_proposal",
+            "paper_selection.selected_paper_count"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "source_verification_manifest.json",
+        "values": {
+          "verification_policy": "initial_bibliography_v1",
+          "paper_selection.max_papers_per_reference_proposal": 5,
+          "paper_selection.selected_paper_count": 5
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "Metadata/source re-freeze only; original membership and separate support gates are unchanged."
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": true,
+      "owning_issue": "#909",
+      "doc_reference": "docs/AGENTIC-QTL-CASE.ja.md"
+    },
+    {
+      "feature_id": "tier-bibliography-budget-b",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "route-b-semantic-source-verify",
+        "argv": [
+          "--proposals",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/b_proposals.tsv}",
+          "--bundle",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/b_bundle.json}",
+          "--cache",
+          "{fixture:tests/fixtures/reachability/features/tier_bibliography_budget/cache.json}",
+          "--out-dir",
+          "{out}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/tier_bibliography_budget/b_proposals.tsv",
+        "tests/fixtures/reachability/features/tier_bibliography_budget/b_bundle.json",
+        "tests/fixtures/reachability/features/tier_bibliography_budget/cache.json"
+      ],
+      "expected_artifacts": [
+        "semantic_claim_source_verification_manifest.json",
+        "semantic_claim_source_verification.tsv",
+        "bibliography_selection.json",
+        "source_verify/bibliography_selection.json"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "semantic_claim_source_verification_manifest.json",
+          "keys": [
+            "verification_policy",
+            "claim_count",
+            "final_verified_claim_count",
+            "paper_selection.max_papers_per_unit_reference",
+            "paper_selection.unselected_claim_count"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "semantic_claim_source_verification_manifest.json",
+        "values": {
+          "verification_policy": "initial_bibliography_v1",
+          "claim_count": 7,
+          "final_verified_claim_count": 0,
+          "paper_selection.max_papers_per_unit_reference": 5,
+          "paper_selection.unselected_claim_count": 2
+        }
+      },
+      "rank_contribution": "none",
+      "rank_assertion": {
+        "type": "deterministic_and_no_rank_artifacts",
+        "reason": "Metadata/source re-freeze only; original membership and separate support gates are unchanged."
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": true,
+      "owning_issue": "#909",
+      "doc_reference": "docs/AGENTIC-QTL-CASE.ja.md"
+    },
+    {
+      "feature_id": "triple-route-e2e",
+      "integration_status": "integrated_closing_slice",
+      "entrypoint": {
+        "command": "guided-profile",
+        "argv": [
+          "--profile",
+          "triple-route",
+          "--out-dir",
+          "{out}",
+          "--execute",
+          "--case-id",
+          "case_fas",
+          "--focal-species",
+          "Pisum sativum",
+          "--phenotype",
+          "fasciated stem with enlarged meristem",
+          "--mechanism-payload",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/mechanism_payload.tsv}",
+          "--phenotype-localization-payload",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/phenotype_localization.json}",
+          "--payload-source",
+          "agent",
+          "--record-cache",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/records}",
+          "--source-cache",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/pmc}",
+          "--bound-claims",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/bound_claims.tsv}",
+          "--candidates",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/case/candidates.tsv}",
+          "--orthology",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/orthology.tsv}",
+          "--reference-function",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/reference_corpus.tsv}",
+          "--family-index",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/family_index.tsv}",
+          "--retrieval-index",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/index_manifest.json}",
+          "--case",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/case/case.yaml}",
+          "--resources",
+          "{fixture:tests/fixtures/reachability/features/triple_route_e2e/case/resources.yaml}"
+        ]
+      },
+      "fixtures": [
+        "tests/fixtures/reachability/features/triple_route_e2e/case/case.yaml",
+        "tests/fixtures/reachability/features/triple_route_e2e/case/candidates.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/case/resources.yaml",
+        "tests/fixtures/reachability/features/triple_route_e2e/mechanism_payload.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/phenotype_localization.json",
+        "tests/fixtures/reachability/features/triple_route_e2e/orthology.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/pmc",
+        "tests/fixtures/reachability/features/triple_route_e2e/bound_claims.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/records",
+        "tests/fixtures/reachability/features/triple_route_e2e/reference_corpus.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/family_index.tsv",
+        "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test",
+        "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/index_manifest.json"
+      ],
+      "expected_artifacts": [
+        "guided_profile_manifest.json",
+        "z01b_family_candidate_bridge/family_candidate_bridge.tsv",
+        "z01b_family_candidate_bridge/family_candidate_bridge_manifest.json",
+        "z02_family_to_copy/family_copy_discrimination.tsv",
+        "z02_family_to_copy/family_copy_manifest.json",
+        "z02_family_to_copy/family_copy_shortlist.tsv",
+        "z03_case_run/integrated_narrowing/integrated_narrowing.tsv",
+        "z03_case_run/integrated_narrowing/narrowing_manifest.json",
+        "z03_case_run/next_experiment/next_experiment_decision.json",
+        "z03_case_run/next_experiment/next_experiment_options.tsv",
+        "z03_case_run/rank/ranked_candidates.tsv",
+        "z03_case_run/stage_a_narrowed/deterministic_shortlist.tsv"
+      ],
+      "expected_manifest_keys": [
+        {
+          "artifact": "guided_profile_manifest.json",
+          "keys": [
+            "schema_version",
+            "profile",
+            "overall_status",
+            "final",
+            "canonical_execution.manifest.sha256",
+            "canonical_execution.state",
+            "canonical_execution.required_work_remaining",
+            "canonical_execution.expected_semantic_run_dir",
+            "legacy_profile.overall_status",
+            "legacy_profile.final",
+            "stages.0.command",
+            "execution_results.0.command"
+          ]
+        },
+        {
+          "artifact": "z01b_family_candidate_bridge/family_candidate_bridge_manifest.json",
+          "keys": [
+            "schema_version",
+            "rank_contribution",
+            "row_counts.total",
+            "row_counts.by_mapping_tier.tier1_source_backed_unique"
+          ]
+        },
+        {
+          "artifact": "z02_family_to_copy/family_copy_manifest.json",
+          "keys": [
+            "schema_version",
+            "case_id",
+            "bridge.supplied"
+          ]
+        },
+        {
+          "artifact": "z03_case_run/integrated_narrowing/narrowing_manifest.json",
+          "keys": [
+            "schema_version",
+            "rank_contribution"
+          ]
+        },
+        {
+          "artifact": "z03_case_run/next_experiment/next_experiment_decision.json",
+          "keys": [
+            "schema_version",
+            "decision_type"
+          ]
+        }
+      ],
+      "assert_values": {
+        "artifact": "guided_profile_manifest.json",
+        "values": {
+          "schema_version": "1.2",
+          "profile": "triple-route",
+          "overall_status": "partial",
+          "final": false,
+          "canonical_execution.state": "semantic_review_required",
+          "canonical_execution.required_work_remaining": true,
+          "canonical_execution.wet_candidates": null,
+          "legacy_profile.overall_status": "completed",
+          "legacy_profile.final": true
+        }
+      },
+      "rank_contribution": "policy:deterministic_v1",
+      "rank_assertion": {
+        "type": "emits_canonical_rank_unchanged",
+        "reason": "the guided-profile triple-route profile executes the canonical deterministic_v1 case-run stage in its z03_case_run subtree, so the canonical rank table (ranked_candidates.tsv / score_contributions.tsv / candidates.tsv / stage_a shortlist) is emitted unchanged: tests.test_triple_route_profile_bridge pins those tables byte-identical to a plain case-run over the same inputs, and the gate's canonical-baseline before/after hash comparison additionally proves the rank pipeline is untouched by the whole run"
+      },
+      "clean_install_smoke": true,
+      "cache_fingerprint_assertion": false,
+      "owning_issue": "#374",
+      "doc_reference": "docs/REACHABILITY-GATE.ja.md#triple-route-e2e"
+    }
+  ]
+}

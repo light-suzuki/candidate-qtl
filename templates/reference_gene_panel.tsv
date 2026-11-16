@@ -1,0 +1,2 @@
+reference_gene_id	reference_gene_name	reference_species	trait_relation	evidence_level	source_id	discovery_method	review_status	notes
+AT1G00000	EXAMPLE_GENE	Arabidopsis thaliana	mutant phenotype matches the structured trait	direct_model_genetic	PMID:00000000	llm_assisted	pending_review	Replace this example with a source-backed reference gene.

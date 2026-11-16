@@ -1,0 +1,2 @@
+case_id	truth_unit_type	cleanliness_state	case_state	state_reason	family_scoreable	rank_metric_eligible
+case_001	gene	clean	not_evaluated	not_evaluated_not_in_index	True	False

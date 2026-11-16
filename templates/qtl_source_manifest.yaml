@@ -1,0 +1,12 @@
+case_id: example_qtl
+source:
+  source_id: "doi:10.xxxx/example"
+  source_reference_name: "source assembly"
+  source_contig: chr1
+  source_start: 100000
+  source_end: 200000
+  coordinate_basis: physical
+  left_marker: marker_left
+  right_marker: marker_right
+  marker_sequences_available: false
+  literature_search_status: complete

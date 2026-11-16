@@ -1,0 +1,3 @@
+gene_id	tissue	stage	value	unit	is_target	source_id
+GENE0001	target_tissue	target_stage	10	TPM	true	local_expression_matrix.tsv
+GENE0001	background_tissue	comparable_stage	2	TPM	false	local_expression_matrix.tsv

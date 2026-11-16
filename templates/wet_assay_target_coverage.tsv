@@ -1,0 +1,2 @@
+assay_id	gene_id	transcript_id	planned_region	actual_covered_region	coverage_fraction	region_class	required_region	quality_status	read_direction	off_target_status	multi_product_status	source_ref
+assay_example_001	GeneA	GeneA.1	chr1:100-299	chr1:100-299	1	cds	yes	pass	bidirectional	none	single	local:chromatograms/GeneA

@@ -1,0 +1,2 @@
+qtl_id	assembly	interval	gene_id	gene_start_end	candidate_rank	ortholog_ids	function_evidence_source	trait_mechanism_hypothesis	parental_variant	variant_class	variant_validation	marker_id	f2_cosegregation_status	exclusion_or_next_action	owner	updated_at
+QTL_example	assembly_v1	chr1:100000-500000	GENE0001	chr1:210000-213500	A	AT1G00010;OS01G0000100	PMID/DOI/DB ID required	One concise falsifiable hypothesis	c.245delA	frameshift	parental Sanger pending	MKR_001	pending	Design co-dominant marker and test parents/F1	unassigned	2026-07-10

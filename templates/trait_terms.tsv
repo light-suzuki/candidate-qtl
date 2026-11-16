@@ -1,0 +1,2 @@
+term	term_type	source_id	approved	weight_class	notes
+required	direct_phenotype|organ_stage|biological_process|mechanism_hypothesis	required	true|false	direct|context	Do not include known causal gene names in blinded benchmarks

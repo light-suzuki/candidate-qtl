@@ -1,0 +1,2 @@
+case_id	a_only_hit	a_lane_state	b0_only_hit	b0_lane_state	b1_only_hit	b1_lane_state	union_hit	union_lane_state	union_b_lane
+case_001	False	miss	False	miss			False	miss	b0

@@ -1,0 +1,4 @@
+gene_id	chrom	start	end	strand	gene_name	description	gene_biotype	annotation_quality	transcript_count	representative_transcript	protein_length	translation_status	cds_length
+gene_001	chr1	1000	5000	+	ShSBEI	starch branching enzyme I-like protein	protein_coding	complete_orf	2	t_001	600	full	1800
+gene_002	chr1	20000	24000	-	ShSBEI	starch branching enzyme I-like protein, homeolog	protein_coding	complete_orf	1	t_002	400	full	1200
+gene_003	chr1	90000	93000	+		pseudogene-like locus	protein_coding	no_cds	0		0	no_cds	0

@@ -1,0 +1,151 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Tests (Ubuntu, Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The core suite contains an intentional invariant test against
+          # origin/main. PR merge-ref checkouts at the default depth do not
+          # create that remote-tracking ref, so fetch full history here.
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package (pinned alignment extra + test tools)
+        run: python -m pip install -c constraints.txt -e ".[alignment]" coverage pytest
+      - name: Record environment versions
+        run: python -m candidate_qtl doctor --json
+      - name: Run production/core tests with coverage
+        run: |
+          python -m coverage run scripts/run_test_partition.py --partition core
+          python -m coverage report --omit="src/candidate_qtl/*benchmark*.py,src/candidate_qtl/audit_freeze.py,src/candidate_qtl/commands/benchmark.py,src/candidate_qtl/challenge_aggregation.py,src/candidate_qtl/command_log_validation.py,src/candidate_qtl/corpus_masking.py,src/candidate_qtl/knowledge_coverage.py,src/candidate_qtl/lane_coverage.py,src/candidate_qtl/query_eligibility.py"
+      - name: Compile Python sources
+        run: python -m compileall -q src scripts
+      - name: Check helper scripts
+        run: |
+          python scripts/qtlift_client.py --help
+          python scripts/compare_qtl_sources.py --help
+          python scripts/candidate_qtl_extensions.py --help
+          python scripts/claim_review_session.py --help
+      # The generated CLI reference is the complete documented command contract.
+      # A dedicated step names the failure directly instead of surfacing it as a
+      # generic test failure.
+      - name: Check the generated CLI reference is current
+        run: python scripts/generate_cli_reference.py --check
+      # Canonical feature-reachability gate (issue #373), source mode: every
+      # integrated registry entry must pass as a real `python -m candidate_qtl`
+      # subprocess against the source checkout, with its declared artifacts,
+      # manifest keys, fixture immutability and no-rank-artifacts policy.
+      - name: Reachability gate (source checkout)
+        run: python scripts/reachability_gate.py --mode source --repo-root "$GITHUB_WORKSPACE"
+      # The README workflow figures are generated assets, not hand-drawn SVGs.
+      # This step fails when one was edited directly or when a diagram change was
+      # committed without re-rendering both the light and dark variants.
+      - name: Check the generated workflow diagrams are current
+        run: python scripts/render_workflow_diagrams.py --check
+
+  schema-extra:
+    name: Optional pandera schema backend
+    runs-on: ubuntu-latest
+    # The `schema` extra is optional, so the pinned `test` job skips
+    # PanderaBackendTests. Without this job that skip is permanent and the extra
+    # is never exercised. Kept separate so the reproducible pinned run is not
+    # widened by an unpinned optional dependency.
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -c constraints.txt -e ".[schema]"
+      - name: Fail if the pandera backend is still skipped
+        run: python -c "from candidate_qtl import schemas; assert schemas.pandera_available(), 'schema extra installed but pandera_available() is False'"
+      - run: python -m unittest tests.test_schemas -v
+
+  lint:
+    name: Ruff (real-defect lint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install ruff
+      - run: ruff check src scripts tests
+
+  build:
+    name: Build + clean install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install build
+      - name: Build sdist + wheel
+        run: python -m build
+      - name: Clean-environment install from the wheel
+        run: |
+          python -m venv /tmp/cleanenv
+          /tmp/cleanenv/bin/pip install --upgrade pip
+          /tmp/cleanenv/bin/pip install -c constraints.txt dist/*.whl
+          /tmp/cleanenv/bin/candidate-qtl --version
+          /tmp/cleanenv/bin/python -c "import candidate_qtl; print('import ok', candidate_qtl.__version__)"
+          /tmp/cleanenv/bin/python -c "import importlib.util; assert importlib.util.find_spec('pysam') is None; print('default wheel excludes pysam')"
+          # The default weight registry must be packaged: ranking loads it with
+          # no source tree present. This guards the vendored-data packaging.
+          /tmp/cleanenv/bin/python -c "from candidate_qtl.ranking_policy import default_registry_path, load_weight_registry; p=default_registry_path(); assert p.exists(), p; r,_=load_weight_registry(); print('registry ok', len(r), 'rows from', p)"
+      # Canonical feature-reachability gate (issue #373), installed mode: first
+      # prove the clean venv imports candidate_qtl from site-packages (no source
+      # fallback), then run every integrated registry entry with cwd outside the
+      # repo. The gate runs under the clean venv itself: its validator imports
+      # candidate_qtl.commands, which requires the package's dependencies, so a
+      # bare runner python without the wheel cannot execute it.
+      - name: Reachability gate (clean wheel install)
+        run: /tmp/cleanenv/bin/python scripts/reachability_gate.py --mode installed --python /tmp/cleanenv/bin/python --repo-root "$GITHUB_WORKSPACE"
+
+  integration-blast:
+    name: BLAST+ integration smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install BLAST+
+        run: sudo apt-get update && sudo apt-get install -y ncbi-blast+
+      - run: python -m pip install -c constraints.txt -e ".[alignment]"
+      - name: Real local-BLAST discover smoke
+        run: python -m unittest tests.test_integration_blast tests.test_blast_panel_integration tests.test_claim_review_session -v
+      - name: Practical packet to Wet with real BLAST
+        run: python -m unittest discover -s workflow -p test_practical_packet_run.py -v
+
+  windows-wrapper:
+    name: Windows PowerShell wrapper
+    runs-on: windows-latest
+    # The Python package depends on pysam (Linux/macOS only); on Windows the
+    # runtime is WSL, so this job validates the Windows-native entry point -- the
+    # PowerShell wrapper -- rather than a native package install.
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse-check candidate-qtl.ps1
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tokens = $null; $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'scripts/candidate-qtl.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) { $errors | ForEach-Object { Write-Error $_ }; exit 1 }
+          Write-Host 'candidate-qtl.ps1 parses cleanly'

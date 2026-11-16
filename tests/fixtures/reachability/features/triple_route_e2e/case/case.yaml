@@ -1,0 +1,11 @@
+case_id: case_fas
+trait:
+  name: fasciated stem
+source:
+  source_id: fixture
+  target_interval: chr5:1-20000
+target:
+  assembly: fixture
+inputs:
+  candidates_resource: candidates
+ranking_policy: deterministic_v1

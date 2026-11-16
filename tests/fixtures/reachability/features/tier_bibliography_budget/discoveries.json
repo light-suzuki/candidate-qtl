@@ -1,0 +1,19 @@
+{
+  "case_id": "case403",
+  "discovered_sources": [
+    {
+      "reference_function": "receptor signaling restricts meristem size",
+      "reference_gene": "REF1",
+      "reference_species": "Plant beta",
+      "reported_gene": "REF1",
+      "reported_species": "Plant beta",
+      "retrieved_at": "2026-01-01T00:00:00Z",
+      "source_id": "PMID:107",
+      "source_text": "Synthetic REF1 perturbation changes meristem size.",
+      "source_title": "Synthetic paper 107",
+      "source_url": "https://example.invalid/paper107",
+      "unit_id": "bsem-1cd7e52df4596736"
+    }
+  ],
+  "parent_bundle_sha256": "5852b010532ad91f3ad20d74ebc6a92ed48685faf12b0d988a6817e2584e5f53"
+}

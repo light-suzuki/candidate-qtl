@@ -1,0 +1,74 @@
+{
+  "artifact_sha256": {
+    "documents.tsv": "1815820307b08d0489bd92ac3eaded3b4c92a46e7b1bd67f41d270279f0d4216",
+    "excluded_rows.tsv": "f06bb7a2c6bbc8bc0f1cad941534ed07cfc5dd93ac17ae419cb3cd3b676ae0a7",
+    "postings.json": "dd08bd27a3625144c78ea0df9efec481181f6fcd953eb852fb879a7ab46f4030"
+  },
+  "built_at_utc": "2026-08-13T04:20:29+00:00",
+  "candidate_qtl_version": "0.22.0",
+  "command": "retrieval-index-build",
+  "corpus_inputs": {
+    "tests/fixtures/reachability/features/triple_route_e2e/reference_corpus.tsv": {
+      "method": "full_sha256",
+      "mtime_ns": 1786594808772478700,
+      "path": "tests/fixtures/reachability/features/triple_route_e2e/reference_corpus.tsv",
+      "sha256": "27ddea832e87b4522b87e99c29532b12ed7d293657b780b7b2b662439db2e964",
+      "size_bytes": 373,
+      "strength": "strong"
+    }
+  },
+  "corpus_label": "plant_ref_test",
+  "database_version": "plant_ref_test",
+  "document_count": 2,
+  "excluded_row_count": 0,
+  "exclusion_reasons": {},
+  "index_format_version": "1.0.0",
+  "interval_information_in_index": false,
+  "model_name": "candidate-qtl-local-lexical",
+  "model_version": "tfidf-1.1.0",
+  "outputs": {
+    "documents": "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/documents.tsv",
+    "excluded": "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/excluded_rows.tsv",
+    "manifest": "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/index_manifest.json",
+    "postings": "tests/fixtures/reachability/features/triple_route_e2e/retrieval_index/plant_ref_test/postings.json"
+  },
+  "preprocessing": {
+    "determinism": "no randomness and no learned parameters; the same corpus rebuilds byte-identically",
+    "text_fields": [
+      "description",
+      "function_description",
+      "mutant_phenotype",
+      "pathway",
+      "go_terms",
+      "keywords",
+      "tissue_specificity",
+      "developmental_stage",
+      "protein_family"
+    ],
+    "tokenizer": "casefold, [a-z][a-z0-9-]{2,}, shared stopword list, no stemming",
+    "weighting": "tf=1+log(count), idf=log((N+1)/(df+1))+1, L2-normalised; score is cosine similarity in [0,1]"
+  },
+  "provider": {
+    "active_provider": "local_lexical_tfidf",
+    "active_provider_requires_third_party": false,
+    "external_transmission": "none: the phenotype text and the corpora never leave this machine",
+    "optional_backends": {
+      "chromadb": false,
+      "faiss": false,
+      "sentence_transformers": false,
+      "transformers": false
+    },
+    "upgrade_path": "an embedding backend is a provider swap: build a new index with its own database_version and model_version; existing frozen retrievals stay valid and comparable only within their own database"
+  },
+  "safety": [
+    "the index holds reference records only; no QTL interval, candidate id, or private sequence enters it",
+    "rows without a family/orthogroup or without a source id are excluded before Top-K and kept in a ledger",
+    "retrieval similarity computed from this index is a discovery route, never causal evidence"
+  ],
+  "schema_version": "1.0",
+  "source_backed": "every indexed row carries a source_id; rows without one are excluded, never indexed",
+  "species": [
+    "Arabidopsis thaliana"
+  ],
+  "token_count": 17
+}

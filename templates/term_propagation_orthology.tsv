@@ -1,0 +1,3 @@
+candidate_gene_id	reference_gene_id	relationship	source_genome	reference_role	reference_species	confidence
+NATIVE_GENE_ID	REFERENCE_GENE_ID	one_to_one	AT_TAIR10	functional_reference	Arabidopsis thaliana
+NATIVE_GENE_ID	ANCHOR_GENE_ID	one_to_many	Mt_v5	close_anchor	Medicago truncatula	0.7

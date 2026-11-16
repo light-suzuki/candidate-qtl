@@ -1,0 +1,6 @@
+term	ontology	ontology_id	ontology_name	match_type	confidence	approved	source_id
+fasciation	PTO	TO:0000208	fasciation	exact	high	true	local_curated
+stem fasciation	PTO	TO:0000208	fasciation	synonym	medium	true	local_curated
+meristem	PO	PO:0009013	meristem	exact	high	true	local_curated
+shoot apical meristem	PO	PO:0020148	shoot apical meristem	synonym	medium	true	local_curated
+band widening	PTO	TO:0000208	fasciation	llm_suggested	low	false	llm_proposal

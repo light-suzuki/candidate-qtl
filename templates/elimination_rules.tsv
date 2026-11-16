@@ -1,0 +1,21 @@
+elimination_rule_id	scope	evidence_code	minimum_quality	minimum_coverage	strength	default_transition	required_review	rationale	registry_version
+recombinant_outside_core	gene	informative_recombinant_excludes	high	0.0	hard	excluded_by_recombinant	false	An informative recombinant placing the candidate outside the causal block is positional exclusion, the strongest available.	1.0.0
+coordinate_outside_interval	gene	high_confidence_coordinate_excludes	high	0.0	hard	excluded_by_coordinate	false	A high-confidence coordinate or liftover placing the gene outside the interval excludes it positionally.	1.0.0
+cosegregation_failure	gene	cosegregation_discordant	high	0.0	hard	excluded_by_genetics	false	Clear non-cosegregation in F2/F2:3 with adequate genotyping quality is genetic exclusion.	1.0.0
+cosegregation_failure_low_quality	gene	cosegregation_discordant	low	0.0	none	unresolved	true	Phenotyping or genotyping QC flags, penetrance, or a linked QTL make a discordance uninterpretable.	1.0.0
+full_cds_no_parental_difference	coding	full_cds_no_parental_difference	high	1.0	strong	coding_rejected	false	Full CDS and splice boundaries read at the required coverage with no parental difference rejects the coding hypothesis only.	1.0.0
+partial_cds_no_parental_difference	coding	full_cds_no_parental_difference	high	0.0	none	coverage_incomplete	true	Partial coverage cannot reject a coding hypothesis; the unexamined scope is recorded instead.	1.0.0
+variant_direction_conflict	coding	variant_direction_conflict	high	0.0	strong	coding_weakened	true	A confirmed variant contradicting the expected inheritance or direction weakens the coding hypothesis.	1.0.0
+structural_comparison_no_sv	sv_pav	structural_comparison_no_sv	high	1.0	strong	sv_pav_rejected	false	A high-quality structural comparison finding no expected SV rejects the SV hypothesis only.	1.0.0
+expression_discordant_relevant_context	expression	expression_discordant_relevant_context	high	0.0	moderate	expression_hypothesis_weakened	true	Expression clearly inconsistent with the relevant tissue and stage weakens the expression hypothesis; it is not a gene-level exclusion.	1.0.0
+mutant_phenotype_direction_mismatch	gene	mutant_phenotype_direction_mismatch	medium	0.0	moderate	weakened	true	A source-backed mutant phenotype in the opposite direction weakens the candidate without excluding it.	1.0.0
+alternate_paralog_strongly_supported	gene	alternate_paralog_strongly_supported	medium	0.0	moderate	weakened	true	One-to-one orthology unsupported while an alternate paralog is strongly supported is a tie-break, not an exclusion.	1.0.0
+subfamily_architecture_mismatch	gene	subfamily_architecture_mismatch	medium	0.0	moderate	weakened	true	A subfamily or domain-architecture mismatch weakens the candidate relative to its siblings.	1.0.0
+assay_failed	gene	assay_failed	any	0.0	none	technical_failure	true	An assay that did not run is not evidence about the candidate.	1.0.0
+pcr_no_amplification	gene	pcr_no_amplification	any	0.0	none	technical_failure	true	Non-amplification can be a primer or template problem; it is not absence of the target.	1.0.0
+partial_sequencing_only	coding	partial_sequencing_only	any	0.0	none	coverage_incomplete	true	Partially sequenced scope leaves the coding hypothesis unresolved.	1.0.0
+expression_unmeasured	expression	expression_unmeasured	any	0.0	none	unresolved	false	An unmeasured tissue or stage is not non-expression.	1.0.0
+no_annotation_available	gene	no_annotation_available	any	0.0	none	unresolved	true	Missing annotation is a reference limitation, not evidence against the candidate.	1.0.0
+no_ortholog_hit	gene	no_ortholog_hit	any	0.0	none	unresolved	true	Absence of an ortholog hit does not exclude a lineage-specific or orphan candidate.	1.0.0
+low_quality_assembly_region	gene	low_quality_assembly_region	any	0.0	none	unresolved	true	A low-quality assembly region cannot support any elimination.	1.0.0
+provider_failure	gene	provider_failure	any	0.0	none	technical_failure	true	A failed provider or API call carries no biological information.	1.0.0

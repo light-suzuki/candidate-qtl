@@ -1,0 +1,4 @@
+case_id	mechanism_id	mechanism_name	evidence_class	source_log_entry	status	selection_reason
+pea_a	pea_a_M1	Chalcone synthase (CHS) first committed step of anthocyanin biosynthesis	corpus_ortholog_model_plant	source_log.tsv#pea_a_M1	verified	Flower colour and seed-coat anthocyanin phenotype text maps to anthocyanin biosynthesis; CHS is the committed first step (corpus: At CHS, Mt CHS-class).
+pea_a	pea_a_M2	Late anthocyanin pathway enzymes (DFR / LDOX/ANS)	corpus_ortholog_model_plant	source_log.tsv#pea_a_M2	verified	Anthocyanin pigmentation loss in flower/seed coat follows late-pathway enzyme defects; DFR and LDOX corpus-verified (At).
+pea_a	pea_a_M3	MYB-bHLH-WD40 (MBW) transcriptional regulation of anthocyanin genes	corpus_ortholog_model_plant	source_log.tsv#pea_a_M3	verified	Flower colour and seed coat anthocyanin are classically controlled by MBW complexes; TT2/TT8/TTG1 entries corpus-verified in Arabidopsis and Lotus (LjTT2a-c/LjTT8/LjTTG1).

@@ -1,0 +1,15 @@
+You own Route C: retrieve directly reported phenotype-gene/locus/variant relationships.
+Use only phenotype.json focal_species and phenotype; do not use QTL intervals, A/B outputs, truth or scores.
+Search public literature and sequence databases. Start with focal-species phenotype and cellular/developmental synonyms; use source-grounded gene synonyms, then broaden to related/model plants where useful.
+Generic function, homology and your proposed mechanism are not direct phenotype observations. Keep reported gene, experimental species/cultivar/assembly and reference sequence distinct. Never invent citations, identifiers or accessions.
+
+Return TSV with exactly 17 columns, in this order:
+record_id	query_phenotype	focal_species	focal_cultivar_or_accession	reported_phenotype	reference_species	reference_cultivar_or_accession	reported_gene_id	reported_gene_symbol	reported_locus	reported_variant	species_distance	evidence_directness	evidence_type	source_id	reference_sequence_id	notes
+Use the supplied route_c_direct_proposals.tsv header. record_id must be unique; query_phenotype preserves the input verbatim. Leave unknown fields empty.
+Use exactly one full literal value for each enum (no abbreviated S1/D0, translated labels or aliases):
+species_distance: S0_same_cultivar_or_accession | S1_same_species | S2_same_genus | S3_close_clade | S4_broader_legume | S5_model_or_other_plant
+evidence_directness: D0_causal_perturbation_or_rescue | D1_mapped_gene_with_functional_validation | D2_direct_trait_gene_association | D3_context_only
+Example enum pair only: species_distance=S1_same_species; evidence_directness=D0_causal_perturbation_or_rescue. Choose from actual source facts.
+source_id is the PMID/PMCID/DOI actually reached; notes record inspected location and limitations. Multiple sources may be separate records; they are not independent focal genes.
+Save queries, URLs, tool names, raw responses, search coverage and access failures. Follow the execution budget; absence after a completed search differs from provider failure. For no findings return the header only and completed_empty; report failures separately.
+Do not project to the interval, rank, declare verified support or edit Wet membership. Source/identity/claim binding, freeze, projection and member validation happen downstream.

@@ -1,0 +1,2 @@
+f2_id	cross_id	block	environment	phenotype_raw	phenotype_normalized	left_flank_genotype	candidate_marker_genotype	right_flank_genotype	candidate_marker_qc	f2_3_family_id	f2_3_mean	missing_reason	notes
+F2_001	Cross_AxB	1	field_2026	NA	NA	A/B	A/B	A/B	pass	F2_001_F3	NA	not_measured	template_row

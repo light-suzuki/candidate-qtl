@@ -1,0 +1,17 @@
+*.sh text eol=lf
+*.py text eol=lf
+*.tsv text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.svg text eol=lf
+*.fa text eol=lf
+docs/tutorial/*.gff3 text eol=lf
+# Public raw annotation regression (#818): preserve the recorded LF byte hash.
+tests/fixtures/gff3/araport11_mirna_raw.gff3 text eol=lf
+
+# Issue #366 challenge benchmark fixture: freeze/run_manifest record SHA-256
+# of LF-normalized content. Pin LF on every platform so committed checksums
+# hold regardless of core.autocrlf.
+benchmarks/challenge_pea_discriminative_20260812/** text eol=lf

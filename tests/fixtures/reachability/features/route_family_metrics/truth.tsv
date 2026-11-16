@@ -1,0 +1,2 @@
+case_id	truth_unit_type	truth_gene_id	truth_family_id	truth_accession	truth_coordinate	truth_variant	truth_primary_source	truth_mapping_source	truth_provenance_tier	truth_confidence_notes	causal_publication_ids	known_answer_aliases	known_answer_derived_sources	profile_disposition	disposition_reason
+case_001	gene	G_DROPPED	fam_001				PMID:100	mapping_A	tier1	strong	PMID:100		primary	

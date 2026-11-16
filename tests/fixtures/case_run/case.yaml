@@ -1,0 +1,20 @@
+case_id: bundled_fas_like
+trait:
+  name: fasciated_like
+  phenotype_direction: increase
+source:
+  source_id: PMID:fixture
+  target_interval: chr1:1-1000
+  coordinate_basis: physical
+  literature_search_status: complete
+target:
+  assembly: fixture_v1
+inputs:
+  candidates_resource: candidates
+  evidence_resources: [evidence]
+  primer_result_resources: [primer]
+ranking_policy: deterministic_v1
+assay:
+  top_n: 1
+  reserve_n: 1
+  rescue_n: 1

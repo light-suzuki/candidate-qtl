@@ -1,0 +1,2 @@
+query_protein_id	species	assembly_id	annotation_release	source_id	query_role	selection_method	review_status
+example_protein	Pisum sativum	ZW6	release_unknown	UniProt:ACCESSION	functional_homolog	automated_sequence_backed_search	pending_review

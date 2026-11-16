@@ -1,0 +1,2 @@
+reference_id	species	assembly_name	assembly_version	assembly_accession	annotation_name	annotation_version	fasta_path	gff3_path	qtl_source_reference	qtl_projection_method	seqid_map	notes
+required	required	required	required	optional	required	required	required	required	required	native_or_qtlift_or_alignment	optional	All candidate coordinates and IDs are anchored to this FASTA/GFF3 pair

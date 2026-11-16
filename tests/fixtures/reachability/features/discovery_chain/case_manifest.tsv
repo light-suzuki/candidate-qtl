@@ -1,0 +1,2 @@
+case_id	phenotype_text	truth_family_id	route_a_families_tsv	route_b0_families_tsv	route_b1_families_tsv	convergence_tsv	interval_candidates_tsv	route_a_bait_panel_tsv
+case_001	restricted stem cell pool	CLV	route_a.tsv	route_b0.tsv	route_b1.tsv	convergence.tsv	interval.tsv	route_a_bait_panel.tsv

@@ -1,0 +1,4 @@
+gene_id	chrom	start	end	representative_transcript
+Psat_TlA	chr3	1000	2000	Psat_TlA.1
+Psat_TlB	chr3	5000	6000	Psat_TlB.1
+Psat_Other	chr3	8000	9000	Psat_Other.1

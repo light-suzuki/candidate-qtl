@@ -1,0 +1,25 @@
+panel_id: example_candidate_first_v1
+native:
+  species: Pisum sativum
+  taxon_id: 3888
+  assembly_id: example_v2
+  annotation_release: example_v2_annotation_1
+  # Full focal proteome is optional but required for reciprocal-best-hit and
+  # out-of-interval paralog checks.
+  proteome: /data/native/full_proteome.faa
+references:
+  - label: close_anchor_1
+    role: close_anchor
+    species: Medicago truncatula
+    proteome: /data/references/medicago.faa
+    # Optional TSV keyed by reference_gene_id. Supported columns:
+    # gene_description, function_description, go_terms, mutant_phenotype, pathway, expression,
+    # protein_family, source_id.
+    annotation: /data/references/medicago_annotations.tsv
+    resource_version: example_release
+  - label: functional_reference_1
+    role: functional_reference
+    species: Arabidopsis thaliana
+    proteome: /data/references/arabidopsis.faa
+    annotation: /data/references/arabidopsis_annotations.tsv
+    resource_version: example_release

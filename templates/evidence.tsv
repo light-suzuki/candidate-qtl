@@ -1,0 +1,2 @@
+gene_id	evidence_code	direction	confidence	value	source_type	source_id	description
+GENE0001	direct_model_genetic	support	high	loss-of-function phenotype	manual_curation	PMID:00000000	Direct genetic evidence in a model or crop; replace this example.

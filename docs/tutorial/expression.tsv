@@ -1,0 +1,7 @@
+gene_id	tissue	stage	value	unit	is_target	source_id
+GENE_CAUSAL	meristem	s1	20	TPM	true	tutorial_matrix_v1
+GENE_CAUSAL	leaf	s1	2	TPM	false	tutorial_matrix_v1
+DECOY1	meristem	s1	5	TPM	true	tutorial_matrix_v1
+DECOY1	leaf	s1	5	TPM	false	tutorial_matrix_v1
+DECOY2	meristem	s1	1	TPM	true	tutorial_matrix_v1
+DECOY2	leaf	s1	1	TPM	false	tutorial_matrix_v1

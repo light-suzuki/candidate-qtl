@@ -1,0 +1,2 @@
+#query_name	seed_ortholog_evalue	Preferred_name	GOs	eggNOG OGs	eggNOG free text desc.
+GENE_CAUSAL.1	1e-40	SBE1	GO:0003844	OG0001@Viridiplantae	starch branching enzyme

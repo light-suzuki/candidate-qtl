@@ -1,0 +1,3 @@
+gene_id	family_id	family_label	evolutionary_family_id	orthogroup	domain_architecture	domain_ids	domain_source	focal_paralog_count	tandem_expansion	orthology_reference_gene
+g1			EVF1				1		REF1
+g2	FAM2	FAM2_label				1		

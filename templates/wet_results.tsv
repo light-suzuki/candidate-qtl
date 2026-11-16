@@ -1,0 +1,3 @@
+result_id	assay_id	gene_id	sample_id	sample_role	result_type	result_value	variant_id	variant_confirmation_status	validation_result	quality_status	source_ref	review_status	reviewer	requested_candidate_action	generation	individual_id	amplification_status	genotype_call	phenotype_value	cosegregation_result	recombinant_result	sequence_quality	read_direction
+result_example_001	assay_example_001	GeneA	parent_A	parent_a	parental_difference	no_difference				pass	local:chromatograms/GeneA/parent_A.ab1	reviewed	researcher				amplified					pass	bidirectional
+result_example_002	assay_example_001	GeneA	parent_B	parent_b	parental_difference	no_difference				pass	local:chromatograms/GeneA/parent_B.ab1	reviewed	researcher				amplified					pass	bidirectional

@@ -1,0 +1,7 @@
+# Pinned dependency versions for reproducible runs (see docs/CI.ja.md).
+# CI and the recommended local environment install with `-c constraints.txt`
+# so the same source produces the same behaviour. Update procedure: docs/CI.ja.md.
+biopython==1.87
+pandas==3.0.3
+pysam==0.24.0
+PyYAML==6.0.3

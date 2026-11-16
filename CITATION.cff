@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "candidate-qtl"
+abstract: >-
+  An evidence-preserving plant QTL candidate-gene triage workflow and CLI
+  (primary target: Windows 11 + WSL2; Linux also supported). It combines
+  phenotype-first and interval-first candidate discovery with an optional
+  source-backed direct trait-gene/locus/variant rescue lane, deterministic
+  evidence-preserving ranking and provenance, family/copy ambiguity handling,
+  and next-experiment decision support from mapping, reference genome,
+  phenotype, comparative evidence, and Wet validation state - assisting rather
+  than replacing map-based cloning, without claiming automatic causal-gene
+  identification.
+type: software
+authors:
+  - alias: "LightSuzuki"
+  - name: "Claude (Anthropic, via Claude Code)"
+    website: "https://www.anthropic.com/claude-code"
+version: "0.24.0"
+license: MIT
+license-url: "https://github.com/light-suzuki/candidate-qtl/blob/main/LICENSE"
+repository-code: "https://github.com/light-suzuki/candidate-qtl"
+keywords:
+  - QTL
+  - plant breeding
+  - candidate gene triage
+  - hypothesis discovery
+  - deterministic ranking
+  - provenance
+  - bioinformatics

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "presets": [
+    {
+      "preset_id": "legume_v1",
+      "provider": "uniprotkb_rest",
+      "taxa": [
+        {
+          "taxon_id": 3702,
+          "species": "Arabidopsis thaliana",
+          "reviewed": true,
+          "note": "outgroup dicot reference; reviewed-only fetch covers this genome, no TrEMBL needed"
+        },
+        {
+          "taxon_id": 3880,
+          "species": "Medicago truncatula",
+          "reviewed": false,
+          "note": "nodulation vocabulary requires TrEMBL: a reviewed-only fetch is ~148 rows and misses the unreviewed entries that carry much of the symbiosis lexicon"
+        },
+        {
+          "taxon_id": 34305,
+          "species": "Lotus japonicus",
+          "reviewed": false,
+          "note": "same TrEMBL dependence as Medicago: reviewed-only fetch is ~146 rows; canonical symbols (NIN, SYMRK, CLE-RS1, LHK1) are unreviewed or absent under those names in UniProt"
+        }
+      ],
+      "required_terms": ["NFP", "LYK3", "NSP2", "CLE13"],
+      "optional_terms": ["NIN", "SYMRK", "CLE-RS1", "LHK1"],
+      "notes": "Versioned corpus preset for the legume nodulation vocabulary. Reproducibility: the fetch records the UniProt release and a per-table sha256 in the fetch manifest, and the build records corpus_sha256 / excluded_sha256 / coverage_sha256 in the corpus manifest. NCBI taxon ids 3702/3880/34305 verified against NCBI Taxonomy (eutils esummary, 2026-08-11). Proteome UP ids are not recorded here: this repository has no primary source for them (to be confirmed). Required terms are all present as reviewed UniProt gene_primary values in Medicago; the optional terms are mostly unreviewed or named differently, so they are recorded rather than gated. Governance: the acceptance terms are drawn from the public nodulation gene vocabulary (literature/UniProt nomenclature), not derived from any benchmark truth or benchmark case."
+    }
+  ]
+}

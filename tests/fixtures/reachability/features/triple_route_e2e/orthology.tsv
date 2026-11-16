@@ -1,0 +1,2 @@
+gene_id	reference_gene_id	orthogroup	relationship	provider
+Psat_CLV1	AtCLV1	OG0002	best_hit_homology	local_blastp:test

@@ -1,0 +1,6 @@
+case_id	phenotype_text	phenotype_direction	inheritance	interval	interval_genes	answer_gene_id	answer_gene_name	answer_locus	answer_pathway
+case_missed_pathway	unusual purple pigment in the pod wall	increase	recessive	chr1:1-100000	interval_missed_pathway.tsv	GeneP	anthocyanin regulator	Pu	anthocyanin_biosynthesis
+case_pathway_gene_missed	fasciated stem with extra carpels	increase	recessive	chr2:1-100000	interval_pathway_gene_missed.tsv	GeneClv	CLV3	clv3	CLAVATA_WUSCHEL
+case_recovered	powdery mildew resistant foliage	decrease	recessive	chr3:1-100000	interval_recovered.tsv	GeneEr	MLO1	er1	powdery_mildew_resistance
+case_leaked	loss of function of GeneEr drives the fasciated apex	increase	recessive	chr4:1-100000	interval_leaked.tsv	GeneEr	MLO1	er1	powdery_mildew_resistance
+case_truth_missing	dwarf compact habit	decrease	recessive	chr5:1-100000	interval_missed_pathway.tsv	GeneAbsent	GA20ox	Le	gibberellin_signaling

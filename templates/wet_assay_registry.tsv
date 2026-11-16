@@ -1,0 +1,2 @@
+assay_id	gene_id	transcript_id	hypothesis_id	assay_type	planned_region	region_class	assay_state	failure_reason	source_ref	review_status	reviewer
+assay_example_001	GeneA	GeneA.1		parental_sanger	chr1:100-299	cds	completed		local:assay_plan.tsv	reviewed	researcher

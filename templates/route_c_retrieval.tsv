@@ -1,0 +1,19 @@
+# Route C retrieval contract (issue #193, Phase 1)
+#
+# External phenotype/protein embedding retrieval output mapped to this exact
+# column set before running `candidate-qtl retrieval-import`.
+#
+# Rules:
+# - Columns must be exactly these; any extra column (e.g. an interval gene id)
+#   is rejected, so interval information cannot enter the retrieval input.
+# - family_id and/or orthogroup_id: at least one non-empty per row.
+# - retrieval_score: numeric similarity/cosine; higher is better.
+# - rank: positive integer, unique, 1 = best match.
+# - model_name / model_version / database_version: non-empty provenance.
+# - The workflow never scores this as causal evidence; it is an independent
+#   discovery route compared by convergence only.
+#
+# reference_gene_id	reference_species	family_id	orthogroup_id	retrieval_score	matched_modality	matched_description_or_phenotype	model_name	model_version	database_version	rank
+# AtCLV1	Arabidopsis thaliana	CLV	OG0001234	0.912	protein_text	receptor kinase restricting the stem cell pool; meristem_development	protst	0.1.0	plant_embedding_db_2026-07	1
+# AtCLV2	Arabidopsis thaliana	CLV	OG0001234	0.887	protein_text	receptor kinase; CLAVATA signalling	protst	0.1.0	plant_embedding_db_2026-07	2
+# AtPXY	Arabidopsis thaliana	PXY	OG0005678	0.854	protein_text	receptor kinase for procambial cell division	protst	0.1.0	plant_embedding_db_2026-07	3

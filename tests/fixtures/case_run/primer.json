@@ -1,0 +1,19 @@
+{
+  "target": {"source": "interval", "name": "GeneStrong"},
+  "databases": ["fixture_db"],
+  "pairs": [
+    {
+      "name": "pair_1",
+      "forward": "ACGTACGTACGTACGTACGT",
+      "reverse": "TGCATGCATGCATGCATGCA",
+      "product_size": 220,
+      "tm_f": 60.0,
+      "tm_r": 60.2,
+      "n_off_target": 0,
+      "specificity": {"pair_product_count": 1, "per_db": [{"db": "fixture_db", "n_off_target": 0}]},
+      "coverage_status": "target_covered",
+      "gel_distinguishable": true,
+      "risk": "low"
+    }
+  ]
+}

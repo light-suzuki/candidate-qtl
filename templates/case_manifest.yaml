@@ -1,0 +1,72 @@
+case_id: example_case
+trait:
+  name: example_trait
+  phenotype_direction: increase
+source:
+  source_id: "doi:10.xxxx/example"
+  target_interval: chr1:1-10000
+  coordinate_basis: physical
+  literature_search_status: complete
+# Alternatively use marker_hits_resource and/or qtlift_result_resource.
+target:
+  assembly: example_v1
+  fasta_resource: example_fasta
+  gff3_resource: example_gff3
+inputs:
+  evidence_resources: []
+  primer_result_resources: []
+  llm_evidence_resources: []
+  # Optional machine-readable facts for next-experiment decision support.
+  mapping_gate_resource:
+  informative_recombinants_resource:
+  assay_outcomes_resource:
+  exon_coverage_resource:
+  # Optional canonical Wet-state inputs. Primer/exon plan imports remain design-only.
+  wet_assay_registry_resource:
+  wet_coverage_resource:
+  wet_results_resource:
+  wet_history_resource:
+  # Optional locus/mechanism hypothesis ledger and typed evidence sources.
+  hypotheses_resource:
+  hypothesis_history_resource:
+  canonical_observations_resource:
+  sv_events_resource:
+  # Optional QTL-limited protein-to-genome annotation rescue inputs.
+  annotation_rescue_query_proteins_resource:
+  annotation_rescue_query_metadata_resource:
+  annotation_rescue_projection_gff_resource:
+  candidate_path_decision_resource:
+  candidate_flags_resource:
+ranking_policy: deterministic_v1
+# Dry-ranking score gate for hand-written cases. discover-promote overwrites
+# this with the discover run's own defaults (min_top_score=1.0, top_n-sized
+# batches) so promoted shortlists are ranked exactly as they were built.
+min_top_score: 2.0
+annotation_rescue:
+  execute_local: false
+  projection_complete: false
+  miniprot: miniprot
+  threads: 4
+  review_limit: 20
+assay:
+  top_n: 3
+  reserve_n: 3
+  rescue_n: 3
+  flank: 500
+decision_support:
+  # Unknown is preserved as unknown; it is never converted to a numeric price.
+  budget_class: unknown
+  allowed_technologies:
+    - additional_grid_markers
+    - top_n_parental_sanger
+    - multiplex_amplicon_sequencing
+    - target_capture
+    - sv_te_cnv_pav_branch
+    - expression_assay
+  available_samples:
+    parents: unknown
+    f1: unknown
+    informative_recombinants: unknown
+    segregating_population: unknown
+    target_tissue: unknown
+  local_cost_classes: {}

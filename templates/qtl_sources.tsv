@@ -1,0 +1,2 @@
+qtl_source_id	trait	study_citation	source_assembly	source_interval	source_peak	left_marker	right_marker	effect_allele	effect_direction	population	environment	target_assembly	qtlift_job_id	target_interval	target_peak	orientation	qtlift_confidence	anchor_gene_support	marker_support	manual_review	notes
+QTL_example_01	target_trait	PMID/DOI required	assembly_B	Chr1:100000-500000	Chr1:300000	MKR_L	MKR_R	Parent_B	increase	F2_AxB	field_2026	assembly_A	pending	pending	pending	pending	pending	pending	pending	required	Do not overwrite original coordinates

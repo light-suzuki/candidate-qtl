@@ -1,0 +1,4 @@
+resources:
+  candidates: {type: candidates_tsv, path: candidates.tsv}
+  evidence: {type: canonical_evidence, path: evidence.tsv}
+  primer: {type: primerblast_json, path: primer.json}

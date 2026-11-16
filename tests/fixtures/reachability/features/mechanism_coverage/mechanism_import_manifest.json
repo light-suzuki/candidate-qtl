@@ -1,0 +1,15 @@
+{
+  "case_id": "opaque_reachability",
+  "proposal_round": 1,
+  "interval_informed": false,
+  "blind_discovery_claim": true,
+  "family_node_portfolio_met": true,
+  "localization_freeze": {
+    "path": "phenotype_localization_freeze_manifest.json",
+    "sha256": "b838f6053bad4ea8e8009e61a1e530f1baac2d5c6a4b82f197340bbfe296bb4c"
+  },
+  "output_sha256": "a1def4088bda61a024acfb21ec2a2dda2e300297e8c9b01836ee21306f81ebba",
+  "outputs": {
+    "mechanisms": "mechanism_hypotheses.tsv"
+  }
+}

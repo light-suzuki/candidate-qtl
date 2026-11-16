@@ -1,0 +1,4 @@
+resources:
+  candidates:
+    type: candidates_tsv
+    path: candidates.tsv

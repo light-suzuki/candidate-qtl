@@ -1,0 +1,13 @@
+project_id: example_qtl
+assembly: assembly_v1
+interval: chr1:100000-500000
+reference:
+  fasta: C:\path\to\private\assembly_v1.fa
+  gff3: C:\path\to\private\assembly_v1.gff3
+parents:
+  parent_a: ParentA
+  parent_b: ParentB
+f2:
+  table: C:\path\to\private\f2_genotype_phenotype.tsv
+assay:
+  top_n: 10

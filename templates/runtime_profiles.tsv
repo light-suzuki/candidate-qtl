@@ -1,0 +1,3 @@
+profile	ram_target_gb	threads	reference_proteomes	max_hits_per_query	orthology_refinement	family_tree_policy	notes
+accuracy64	64	8	3-6	50	Top+Rescue+ambiguous+selected_no_hit	ambiguous_top_families	Development and primary validation profile
+laptop16	16	4	2-3	25	Top+Rescue+ambiguous	one_family_at_a_time	Same evidence schema with sequential low-memory execution

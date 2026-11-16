@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 950" width="1120" height="950" role="img">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#8c959f"/></marker></defs>
+<rect width="1120" height="950" fill="#ffffff"/>
+<rect x="50" y="30" width="470" height="72" rx="10" fill="#dafbe1" stroke="#4ac26b" stroke-width="1.5"/>
+<text x="285.0" y="62.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#0a5c2b" text-anchor="middle">stage_a/ 固定20</text>
+<text x="285.0" y="84.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">deterministic screening shortlist・不変</text>
+<rect x="600" y="30" width="470" height="72" rx="10" fill="#fff8c5" stroke="#e3b341" stroke-width="1.5"/>
+<text x="835.0" y="62.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#6b4900" text-anchor="middle">family/copy artifacts</text>
+<text x="835.0" y="84.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">non-scoring・triple-route後の別artifact</text>
+<rect x="35" y="138" width="1050" height="170" rx="14" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<rect x="52" y="154" width="107" height="22" rx="11" fill="#ddf4ff" stroke="#54aeff"/>
+<text x="105.52" y="169" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0a3069" text-anchor="middle">① review / Wet</text>
+<rect x="65" y="196" width="300" height="82" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="215.0" y="233.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">human / LLM review</text>
+<text x="215.0" y="255.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">元Stage-Aのscore/集合は上書き不可</text>
+<rect x="410" y="196" width="300" height="82" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="560.0" y="233.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">Primer / PCR / Sanger</text>
+<text x="560.0" y="255.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">assay execution</text>
+<rect x="755" y="196" width="300" height="82" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="905.0" y="233.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">normalized Wet state</text>
+<text x="905.0" y="255.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">失敗・partial・negativeを区別</text>
+<path d="M285,102 L285,194" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M365,237 L408,237" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M710,237 L753,237" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="35" y="344" width="1050" height="220" rx="14" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<rect x="52" y="360" width="183" height="22" rx="11" fill="#fff8c5" stroke="#e3b341"/>
+<text x="143.32" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#6b4900" text-anchor="middle">② interpretation / narrowing</text>
+<rect x="65" y="408" width="300" height="86" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="215.0" y="447.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">locus-hypothesis ledger</text>
+<text x="215.0" y="469.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">coding / regulatory / SV / PAV</text>
+<rect x="410" y="408" width="300" height="86" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="560.0" y="447.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">candidate-elimination</text>
+<text x="560.0" y="469.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">強い位置・遺伝証拠でのみ除外</text>
+<rect x="755" y="408" width="300" height="86" rx="10" fill="#fff8c5" stroke="#e3b341" stroke-width="1.5"/>
+<text x="905.0" y="447.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#6b4900" text-anchor="middle">integrated-narrowing</text>
+<text x="905.0" y="469.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">family/copy + remaining → N1..N4</text>
+<path d="M905,278 L905,406" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M365,451 L408,451" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M710,451 L753,451" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M835,102 L835,132 L1035,132 L1035,406" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<text x="880" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="11.5" fill="#59636e" text-anchor="middle">条件付き: case-runがartifactを検証して消費</text>
+<rect x="755" y="520" width="300" height="58" rx="10" fill="#dafbe1" stroke="#4ac26b" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="905.0" y="545.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#0a5c2b" text-anchor="middle">stage_a_narrowed/ Wet優先20</text>
+<text x="905.0" y="567.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">narrowing評価時だけ生成</text>
+<path d="M905,494 L905,518" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<rect x="35" y="610" width="1050" height="210" rx="14" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<rect x="52" y="626" width="122" height="22" rx="11" fill="#ddf4ff" stroke="#54aeff"/>
+<text x="112.96000000000001" y="641" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0a3069" text-anchor="middle">③ next experiment</text>
+<rect x="90" y="682" width="380" height="82" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="280.0" y="719.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">next-experiment</text>
+<text x="280.0" y="741.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">narrowingが無くても実行可能</text>
+<rect x="650" y="656" width="380" height="58" rx="10" fill="#dafbe1" stroke="#4ac26b" stroke-width="1.5"/>
+<text x="840.0" y="681.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#0a5c2b" text-anchor="middle">候補が強い</text>
+<text x="840.0" y="703.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">recombinant / F2:3 / independent allele</text>
+<rect x="650" y="736" width="380" height="58" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="840.0" y="761.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">弱い・未評価・棄却</text>
+<text x="840.0" y="783.0" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" fill="#59636e" text-anchor="middle">追加mapping / SV / rescue / expression</text>
+<path d="M560,494 L560,723 L472,723" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M905,578 L905,600 L510,600 L510,723 L472,723" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<text x="705" y="592" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="11.5" fill="#59636e" text-anchor="middle">optional narrowing input</text>
+<path d="M470,704 L648,685" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M470,742 L648,765" fill="none" stroke="#8c959f" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="50" y="850" width="1020" height="62" rx="10" fill="#fff1f0" stroke="#ff8182" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="560" y="875" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#82071e" text-anchor="middle">現在の統合境界</text>
+<text x="560" y="897" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic UI', 'Yu Gothic', Meiryo, 'Segoe UI', sans-serif" font-size="12.2" font-weight="400" fill="#59636e" text-anchor="middle">triple-route → case-run は --case + --resources を同一runに渡した時だけ。standalone homolog-linking の自動handoffは未実装（#426）。</text>
+</svg>

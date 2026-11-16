@@ -1,0 +1,3 @@
+comparison_id	family_id	convergence_status
+cmp_001	CLV	a_b_convergent
+cmp_002	PXY	gene_overlap_only
